@@ -1,0 +1,461 @@
+#container{
+	margin-bottom:51px;
+}
+/****头部信息***/
+.top-area{
+    position: relative;
+    height: 155px;
+    text-align: center;
+    background: #009943;
+}
+.shop-info{
+    top:0px;
+    line-height: 30px;
+    position: absolute;
+    color: #fff;
+    left: 100px;
+    text-align: left;
+}
+.shop-info span{
+	margin-left:5px;
+}
+.shop-img-area {
+    width: 85px;
+    height: 85px;
+    padding: 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
+img.shop-img {
+    width: 82px;
+    height: 79px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.left_money {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    color: #fff;
+}.left_money .moneys{
+    color: #EF9D02;
+    padding-right: 10px;
+}
+.send-time {
+    position: absolute;
+    color: #fff;
+    bottom: 27px;
+    left: 35px;
+}
+.shop-discount-full-cut-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    position: absolute;
+    color: #fff;
+    bottom: 0px;
+    left: 35px;
+}
+i.icon.iconfont.item-full-cut{
+	color:#E08D5E;
+	font-size: 21px;
+}
+i.icon.iconfont.item-discount{
+	color:#DD6E5A;
+}
+span.get-money {
+    border: 1px solid #F39801;
+    color: #F39801;
+    padding: 5px;
+    border-radius: 4px;
+}
+.text-success{
+    color: #F39801;
+}
+/***分类样式****/
+.dining-wrap{
+    padding-top: 40px;
+	padding-left:90px;
+	position:relative;
+}
+/***顶部选项卡**/
+.banner-tap {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+}
+.item.shop-detail,.item.choose-goods {
+    width: 50%;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    color:#ccc;
+}
+.goods-list-area.current,.shop-list-area.current{
+	display: block;
+}
+.goods-list-area,.shop-list-area{
+	display: none;
+}
+
+.item.cur{
+	color:#000;
+	border-bottom: 1px solid #0AC98A;
+}
+
+.dining-wrap .sec-cate{
+	display:none;
+	background:#eee;
+}
+.dining-wrap .thr-cate{
+	display:none;
+	background:#fff;
+}
+.dining-wrap .cate-list{
+	display:block;
+	min-height:40px;
+	line-height:40px;
+	padding-left:8px;
+	cursor:pointer;
+	color:#666
+}
+.dining-wrap .active{
+	color:#008000;
+}
+.dining-wrap .fir-cate>.active{
+	background:#399e39;
+	color:#fff;
+}
+.dining-wrap .sec-cate>.active {
+    background: #83d883;
+    color: #fff;
+}
+.dining-wrap .fir{
+	display:block;
+}
+.dining-wrap .cate-area{
+	float: left;
+    position: relative;
+    left: -90px;
+	width:90px;
+	height:100%;
+	background-color:#ddd;
+	overflow-y: auto;
+}
+/***菜品列表***/
+.dining-area{
+	padding:10px 8px 35px 8px;
+	background-color:#fff;
+	min-height:300px;
+}
+.dining-area .dining-list{
+	padding:10px 0 10px 85px;
+	border-top:1px solid #eee;
+	position:relative;
+	display:block;
+}
+.dining-area .dining-list:first-child{
+	border-top:0;
+}
+.dining-area .dining-img{
+	position:absolute;
+	left:0;
+	margin:auto;
+	width:80px;
+	top:0;
+	bottom:0;
+	max-height: 80px;
+}
+.dining-list .dining-price{
+	color:#d58512;
+}
+.sale-quantity{
+	color:#666;
+	font-size:12px;
+}
+/**添加减少样式***/
+.dining-list .dining-btn{
+	position:absolute;
+	bottom:10px;
+	right:0px;
+	color:#d58512;
+	height:25px;
+}
+.dining-btn>span{
+	display:inline-block;
+	height:100%;
+	width:30px;
+	text-align:center;
+}
+.dining-list .goods-num{
+	border:1px solid #d58512;
+	line-height:23px;
+}
+.dining-list .minus,
+.dining-list .add{
+	width:25px;
+	cursor:pointer;
+	line-height:25px;
+}
+.dining-list .minus{
+}
+.dining-btn .icon{
+	font-size:20px;
+	position:relative;
+	top:3px;
+}
+/*****购物车样式******/
+.cart-wrap{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 30px;
+	border-radius: 25px;
+	background: #f39801;
+	z-index: 11;
+	cursor: pointer;
+	margin-left:20px;
+}
+.cart-wrap .img{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.cart-wrap .img i{
+	line-height: 50px;
+	font-size: 25px;
+	color: #fff;
+}
+.cart-wrap .num{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: -5px;
+	right:3px;
+	border-radius: 10px;
+	background: red;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+}
+/****购物车列表*****/
+.cartList-wrap{
+	position: fixed;
+	width: 100%;
+	max-width: 640px;
+	top: 0;
+	bottom: 50px;
+	background: rgba(0,0,0,0.3);
+	z-index: 10;
+}
+.cartList-wrap .cart-area{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+    padding: 0 0 35px 0px;
+}
+.cartList-wrap .cart-area .cart-content table{
+	width: 100%;
+	padding-bottom: 50px;
+}
+.cartList-wrap .cart-area .cart-content table td{
+	line-height: 40px;
+	color: #333;
+	font-size: 16px;
+}
+.cartList-wrap .cart-area .cart-content table thead td{
+	color: #aeaeae;
+}
+.cartList-wrap .cart-area .cart-content table thead td i{
+	margin-right: 5px;
+	font-size: 18px;
+}
+.cartList-wrap .cart-area .cart-content table tbody td{
+	border-bottom: 1px solid #e5e5e5;
+}
+.cartList-wrap .cart-area .cart-content table tbody .text-danger td{
+	padding: 0 10px;
+	color: red;
+	width: 100%;
+}
+.cartList-wrap .cart-area .cart-content table td.col-1{
+	text-align: left;
+	padding-left: 10px;
+}
+.cartList-wrap .cart-area .cart-content table td.col-2{
+	text-align: center;
+	color: #fa8b08;
+}
+.cartList-wrap .cart-area .cart-content table td.col-2 i{
+	font-size: 18px;
+}
+.cartList-wrap .cart-area .cart-content table td.col-2 .unit{
+	color: #666;
+}
+.cartList-wrap .cart-area .cart-content table td.col-3{
+	text-align: right;
+	padding-right: 10px;
+}
+.cartList-wrap .cart-area .cart-content table td.col-3 i{
+	color: #fa8b08;
+}
+.cartList-wrap .cart-area .cart-content table td.col-3 .num{
+	padding: 0 8px;
+	text-align: center;
+	border: 1px solid #facf8a;
+}
+/******底部导航*******/
+.bottomNav{
+	max-width: 640px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	background: #fff;
+	border-top: 1px solid #e5e5e5;
+	z-index: 10;
+}
+.bottomNav a{
+	text-decoration: none;
+	display: block;
+	float: left;
+	width: 50%;
+	line-height: 50px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	background: #fff;
+	padding-left: 30px;
+}
+.bottomNav a i{
+	font-size: 20px;
+}
+.bottomNav a span ,.bottomNav a i{
+	color: #ff8700;
+}
+.bottomNav a.payment{
+	background: #ccc;
+	color: #fff;
+	font-size: 16px;
+	padding: 0;
+}
+.bottomNav a.payment.able.active{
+	background: #009946;
+}
+.bottomNav a.payment span,.bottomNav a.payment i{
+	color: #fff;
+}
+.bottomNav a.payment i{
+	margin-right: 5px;
+}
+.dining-area .no-content{
+	position:relative;
+	line-height: 50px;
+    text-align: center;
+    color: #777;
+}
+.dining-area .content-text{
+	position: absolute;
+    right: 0;
+    left: 0;
+}
+.dining-area .no-content .icon{
+	margin-right:5px;
+	font-size:20px;
+	position:relative;
+	top:2px;
+}
+.no-content{
+	text-align:center;
+}
+
+
+.user-area{
+    padding: 0 10px;
+    background: #fff;
+    margin-left: -90px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.user-area-1{
+/* 	margin-bottom: 5px; */
+/* 	border-bottom: 1px solid #ececec; */
+}
+.user-area-5{
+	border-bottom: 1px solid #ececec;
+}
+.user-area-0 .user-info a i{
+	color: #71adff;
+}
+.user-area .user-info a i{
+	margin-right: 8px;
+}
+.user-area-2 .user-info a i{
+	color: #C78AFF;
+}
+.user-area-3 .user-info a i{
+	color: #F0C899;
+}
+#content .admin-area{
+	margin-bottom:8px;
+}
+#content .fen-area{
+	margin-bottom:8px;
+}
+.order-area a i.arrow,.cart-area a i.arrow,.user-area a i.arrow,.other-area a i.arrow{
+	float: right;
+	color: #bbb;
+}
+.shop-score-area {
+    position: absolute;
+    top: 30px;
+    left: 99px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+i.icon.iconfont.star{
+	font-size: 14px;
+}
+
+.star-desc {
+    display: flex;
+    width: 100%;
+    padding: 5px 2px;
+}
+.star-desc.star-1 {
+    color: #f6e2a4;
+}
+.star-desc.star-2 {
+    color: #ffe699;
+}
+.star-desc.star-3 {
+    color: #fdd28d;
+}
+.star-desc.star-4 {
+    color: #ffd859;
+}
+.star-desc.star-5 {
+    color: #ffcf31;
+}
+.star-desc.star-6 {
+    color: #fab64;
+}
+.star-desc.star-7 {
+    color: #f8a519;
+}
+i.icon.iconfont.star {
+    color: #F39801;
+}
+
+

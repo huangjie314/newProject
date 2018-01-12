@@ -1,0 +1,310 @@
+@CHARSET "UTF-8";
+
+/*****头部信息******/
+
+.head-nav {
+	height: 38px;
+	line-height: 37px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 640px;
+	border-bottom: 1px solid #eee;
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	background: rgba(255, 255, 255, 0.75);
+	z-index: 999;
+}
+
+.head-nav .head-item {
+	display: block;
+	width: 20%;
+	text-align: center;
+	border-right: 1px solid #eee;
+}
+
+.head-nav .head-item.active {
+	color: #EA742B;
+}
+
+.head-nav .head-item:last-child {
+	border-right: none;
+}
+
+
+/***订单列表****/
+
+.content-wrap {
+	margin: 45px 0 55px;
+}
+
+.order-list-wrap {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	padding: 10px;
+	margin-top: 12px;
+}
+
+.order-list-wrap:first-child {
+	margin-top: 0;
+}
+
+.order-list-wrap .order-list {
+	position: relative;
+	padding-left: 70px;
+}
+
+.order-list-wrap .order-item {
+	line-height: 32px;
+}
+
+.order-list-wrap .left-name {
+	position: absolute;
+	left: 0px;
+}
+
+.order-list-wrap .order-num {
+	border-bottom: 1px solid #d58512;
+}
+
+.order-list-wrap .status-color {
+	color: #d58512;
+}
+
+.order-list-wrap .order-text {
+	text-align: right;
+	color: #666;
+	display: block;
+}
+
+.order-list-wrap .message {
+	font-size: 12px;
+}
+
+.shop-detail .order-text {
+	color: #333;
+	padding-right: 5px;
+}
+
+.order-list-wrap .shop {
+	border-top: 1px solid #eee;
+}
+
+.order-list-wrap .shop .icon {
+	position: relative;
+	top: 2px;
+}
+
+.order-list-wrap .order-last {
+	font-size: 12px;
+	line-height: 25px;
+}
+
+.order-last .left-name {
+	color: #999;
+}
+
+.order-list-wrap .left-name .icon {
+	color: #009964;
+	margin-right: 2px;
+}
+
+.order-list-wrap .last-item {
+	display: block;
+	text-align: right;
+}
+
+.order-list-wrap .order-time {
+	color: #FE0000;
+}
+
+.order-list-wrap .order-sender {
+	color: #BC8E30;
+	display: none;
+}
+
+.order-list-wrap .order-sender.active {
+	display: block;
+}
+
+.order-list-wrap .dining-list {
+	text-align: right;
+}
+
+.order-list-wrap .dining-list .icon {
+	color: #333;
+	margin: 0;
+	color: #BC8E30;
+	font-size: 12px;
+}
+
+.order-list-wrap .dining-list span {
+	margin-left: 5px;
+	text-align: right;
+}
+
+.order-list-wrap .dining-list .dining-price {
+	width: 40px;
+	display: inline-block;
+}
+
+.order-list-wrap .dining-list .dining-count {
+	width: 25px;
+	display: inline-block;
+	color: #BC8E30;
+}
+
+.order-list-wrap .dining-last {
+	color: #FE0000;
+	text-align: right;
+}
+
+.order-list-wrap .dining-last .person-count {
+	color: #666;
+}
+
+.order-list-wrap .dining {
+	border-bottom: 1px solid #eee;
+}
+
+.order-list-wrap .order-status {
+	height: 42px;
+	line-height: 42px;
+	padding: 0 70px 0 20px;
+	position: relative;
+}
+
+.order-list-wrap .order-status .icon {
+	position: absolute;
+	left: 0;
+	color: #EA742B;
+	top: 1px;
+}
+
+.order-list-wrap .order-status .active-btn {
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	height: 32px;
+	background-color: #ccc;
+	width: 70px;
+	text-align: center;
+	color: #fff;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	line-height: 32px;
+	border-radius: 3px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.order-list-wrap .active-btn.active {
+	background: #009964;
+}
+
+.order-list-wrap .delete-btn.active,
+.order-list-wrap .refuse-btn.active {
+	background: #EC6941;
+}
+
+a.order-find {
+	color: #fff;
+	background: #e57f23;
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+}
+
+a.order-find.btn:hover {
+	color: #fff;
+}
+
+.order-list.dining.order-last {
+	padding: 0px 0px 40px 0px;
+}
+
+.shop-discount {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	color: red;
+}
+
+span.item-price {
+	color: red;
+}
+
+a.order-share.btn {
+	background: #EB0101;
+	position: absolute;
+	left: 90px;
+	bottom: 5px;
+	color: #fff;
+}
+
+a.order-share-over.btn {
+	background: #ccc;
+	color: #fff;
+	position: absolute;
+	left: 90px;
+	bottom: 5px;
+}
+
+a.complain-btn.btn {
+	background: #4F68A0;
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+	color: #fff;
+}
+
+.zan-area {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 0px;
+}
+
+.zan-btn-area {
+	padding: 0px 10px;
+	border: 1px solid #dcdcdc;
+	border-radius: 25px;
+	color: #999;
+	position: relative;
+}
+
+.zan-btn-area.already-zan {
+	color: #EA6868;
+	border: 1px solid;
+}
+
+a.complain-cancel-btn.btn {
+	background: #398DEE;
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+	color: #fff;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	margin-left: -10px;
+}
+
+a.call-sender-btn.btn {
+	border: 1px solid #80C729;
+	color: #fff;
+	position: absolute;
+	bottom: 5px;
+	right: 0px;
+	background: #80C729;
+}
