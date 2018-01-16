@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>添加新地址</title>
+    <link rel="stylesheet" href='../css/sm.min.css'>
+
+
+    <!--2016-08-24 the lastest version designed by joy of change-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="安徽千界信息科技有限公司">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="www.changekeji.com">
+
+    <link rel="stylesheet"  href="../css/iconfont.css">
+    <link rel="stylesheet"  href="../css/common.css">
+
+    <link rel="stylesheet"  href="../css/bootstrap.min.css">
+    <link rel="stylesheet"  href="../css/common.css">
+     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet"  href="../css/addAddress.css">
+</head>
+
+<body>
+    <!--主容器-->
+    <div id="container" style="background: #fff;"
+        <!--主体内容-->
+        <div id="content">
+            <div class="address-wrap">
+                 <table cellspacing="0">
+                    <tbody>
+                        <tr class="tr">
+                            <td class="col-1">联系人：</td><td class="col-2"><input type="text" class="callname" placeholder="请输入姓名" value=""></td>
+                        </tr>
+                        <tr class="tr">
+                            <td class="col-1">手机号：</td><td class="col-2"><input type="text" class="phone" placeholder="请输入手机号码" value=""></td>
+                        </tr>
+                        <tr class="tr addr">
+                            <td class="col-1">地址：</td><td class="col-2"><input type="hidden" class="sex"><input type="text" id="addr" placeholder="请选择学校楼栋"  value=""><div class="arrow-down"></div></td>
+                        </tr>
+                        <tr class="tr detail">
+                            <td class="col-1"></td><td class="col-2"><input type="text" id="detail" placeholder="请输入具体的宿舍号"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <a class="btn btn-primary add-address btn-sm">保存</a>
+                                <a class="btn btn-default btn-sm back" href="javascript:window.history.back(-1);">返回</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </div>
+        <!--页面脚部-->
+        <div id="footer">技术支持：<a href="http://www.changekeji.com">千界科技</a></div>
+
+    </div>
+    <!--提示框-->
+    <!--弹框的遮罩层-->
+<div id="maskDialog"></div>
+<!--其他遮罩层 如加载框-->
+<div id="otherMaskDialog"></div>
+<!-- 加载中操作转圈提示 -->
+<div id="loadingDialog" class="my-dialog">
+    <div class="my-dialog-body">
+        <img src="../image/loading.gif">
+    </div>
+</div>
+
+<!--页面即将跳转提示框-->
+<div id="skipDialog" class="my-dialog">
+    <div class="my-dialog-body">
+        <img src="../image/x-loading.gif">
+        <div class="desc-text">页面即将跳转，请稍等...</div>
+    </div>
+</div>
+
+<!--警告提示框-->
+<div id="alertDialog" class="my-alert-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe697;</i>
+        </div>
+        <div class="title-text">提示</div>
+        <div class="desc-text">页面已损坏无法打开</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--错误提示框-->
+<div id="errorDialog" class="my-error-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text">错误</div>
+        <div class="desc-text">加载失败</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--普通的友情提示框-->
+<div id="normalDialog" class="my-normal-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text">敬请期待</div>
+        <div class="desc-text">稍后会联系您</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--操作成功提示框-->
+<div id="successDialog" class="my-success-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe698;</i>
+        </div>
+        <div class="title-text">资料已经提交</div>
+        <div class="desc-text">审核将在三个工作日之后</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--危险操作确认提示框-->
+<div id="dangerConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe69b;</i>
+        </div>
+        <div class="title-text">确认删除</div>
+        <div class="desc-text">确认删除选中的项目吗？</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确认</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!--正常的友情确认提示框-->
+<div id="normalConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text">订单操作</div>
+        <div class="desc-text">确认进行当前操作吗？</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+
+<!--操作成功后的确认提示框-->
+<div id="successConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe696;</i>
+        </div>
+        <div class="title-text">付款成功</div>
+        <div class="desc-text">恭喜您所购商品付款成功</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!--输入验证码确认提示框-->
+<div id="codeConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="code-wrap">
+            <input type="text" id="verifyCode" placeholder="请输入验证码">
+            <img id="verifyCodeImg" src="">
+        </div>
+        <div class="title-text"></div>
+        <div class="desc-text"></div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!--输入退款原因确认提示框-->
+<div id="reasonConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text"></div>
+        <div class="desc-text"></div>
+        <div class="code-wrap">
+            <input type="text" id="refund-reason" placeholder="请输入退款原因">
+            <img id="verifyCodeImg" src="">
+        </div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!-- 模态框（Modal） 操作确认提示框-->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title">
+                    确认提示框
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger">确认删除吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-confirm">确认</button>
+                <button type="button" class="btn btn-default close-action" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div><!-- /.modal -->    <!--公用js文件-->
+    <script src="../js/jquery-1.11.0.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+    <script>jQuery.noConflict()</script>
+    <script type='text/javascript' src='../js/Zepto.js'></script>
+    <script type='text/javascript' src='../js/sm.min.js'></script>
+    <script type='text/javascript' src='../js/sm-extend.min.js'></script>
+    <script type='text/javascript' src='../js/sm-city-picker.min.js'></script>
+    <script type="text/javascript" src="../js/addAddress.js"></script>
+
+</body>
+</html>
