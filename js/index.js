@@ -60,7 +60,7 @@ $(function(){
                 return;
             }
         });
-        
+
         //购物车弹出框显示时调整 弹框位置及大小
         $("#addCartModal").on('show.bs.modal',function(){
             $(this).addClass("modal-show");//标识当前弹出框显示
@@ -70,7 +70,7 @@ $(function(){
             var left = (screenWidth - width)/2;//居左距离
             cartModal.width(width);
             cartModal.css("left",left);
-            
+
             //发送异步请求
 	        if(idList == '' && standard == 1){
 	        	 //异步发送请求，获取选定套餐的记录，同步调整价格(提示用户可选的属性组合)
@@ -88,6 +88,7 @@ $(function(){
 	  	            },
 	                success:function(json){
 	                    if(json.errorCode == 0){
+                            console.log(json.data);
 	                        idList = json.data;
 	                    }else{
 	                        //查找失败
@@ -105,12 +106,12 @@ $(function(){
         $("#addCartModal").on('hidden.bs.modal',function(){
             $(this).removeClass("modal-show");//标识当前弹出框隐藏
         });
-        
+
         //隐藏活动图片
         $('.ingore-btn').click(function(){
         	$('.activity-model').hide();
         });
-        
+
 		//商品展示区域--下单
 		$("#content .recommend-goods-diplay-area .btn-buy,#content .label-goods-diplay-area .btn-buy").click(function(){
 			var id = $(this).attr("data-id");
@@ -178,13 +179,13 @@ $(function(){
                     			$("#addCartModal .modal-title .ori-price-info").show();//显示
                     			$("#addCartModal .modal-title .inventory").html(goods.inventory);//商品库存
                     			$("#addCartModal .modal-title .inventory-area").show();//商品库存显现
-                    			
+
                     			$("#addCartModal .modal-body .property-group-area").hide().html("");//隐藏属性
                     		}
-                    		
+
                     		$("#addCartModal .modal-footer a").attr("data-id",goods.id);//商品主键
                     		showCartModal();//显示底部弹框
-                    		
+
                     	}else{
                     		responseTip(1,"系统繁忙，请稍后再试！");
                     	}
@@ -192,9 +193,9 @@ $(function(){
                     error:errorResponse
 				});
 			}
-			
+
 		});
-        
+
         /**
          * 将商品添加至购物车
          */
@@ -210,7 +211,7 @@ $(function(){
                 if(inventory == 0 || inventory < quantity){
                     //库存为0时，不能加入购物车
                     responseTip(1,"没有库存了，亲！");
-                    
+
                 }else{
 
 	                var gid = $(this).attr("data-id");//商品主键id
@@ -220,7 +221,7 @@ $(function(){
 	                }else{//商品为“统一规格”时
 	                    gpid = 0;//置为0，代表商品为统一规格，无套餐属性
 	                }
-	                
+
 	                //加入购物车
 	                $.ajax(
 	                    {
@@ -239,11 +240,11 @@ $(function(){
 	                                }else{
 	                                	$(".bottom-nav .mycart .cart-icon").append('<span class="cart-num">1</span>');
 	                                }
-	                                
+
 	                            }else{
 	                                //操作失败
 	                                responseTip(1,"系统繁忙，请稍后再试！");
-	
+
 	                            }
 	                        },
 	                        error:errorResponse
@@ -252,7 +253,7 @@ $(function(){
                 }
             }
         });
-        
+
 		/**
          * 立即购买,跳到提交订单页面，确认提交
          */
@@ -279,7 +280,7 @@ $(function(){
                         gpid = 0;//置为0，代表商品为统一规格，无套餐属性
                     }
 
-                    
+
                     //跳到到提交订单界面，确认提交将生成订单--》确认支付
                     window.location.href = "./index.php?c=store&a=confirmOrder&gids="+gid+"&gpids="+gpid+"&counts="+count;
 
@@ -288,14 +289,14 @@ $(function(){
                 return false;
             }
         });
-        
+
         //用户变化屏幕方向时调用
         $(window).bind( 'orientationchange resize', function(e){
             var width =  $("#container").width();//获取内容区域的宽度
-           
+
         });
-        
-        
+
+
         /**数量输入框键盘事件--输入非数字无效**/
         $(".quantity-area .quantity-value").keyup(function() {
             var quantity = $(this).val();
@@ -314,7 +315,7 @@ $(function(){
 
                 }
         });
-        
+
         /**商品数量添加事件**/
         $('.quantity-area .quantity-plus').click(function() {
             var qElem = $('.quantity-area .quantity-value');
@@ -332,7 +333,7 @@ $(function(){
             }
             qElem.val(now);
         });
-   
+
     }
 
     /**
@@ -357,15 +358,16 @@ $(function(){
                         var id = obj.id;
                         var img_url = obj.img_url || '';
                         var thumb = obj.thumb;
+                        alert(thumb);
                         var name = obj.shop_name;
                         var address = obj.address;
                         var content = obj.content;
                         var send_price = obj.send_price;
                         var total_count = obj.total_count;
-                        
+
                         var score = obj.score;
                         var star = obj.star;
-                        
+
                         var starHtml = '';
                         if(star > 0){
                         	var unstar = 7 - star;
@@ -377,10 +379,10 @@ $(function(){
                         	}
                         	starHtml += '<em style="color:green; padding-left:0px;font-size:16px;">'+score+'分</em>';
                         }
-                        
-                        
-                        
-                        
+
+
+
+
                         //注释段代码为显示是否有男女配送员，因需求改变故注释此段，如有类似需求，可放出来
 //                      var maleSender = obj.maleSender;
 //                      var femaleSender = obj.femaleSender;
@@ -437,7 +439,7 @@ $(function(){
                         }else if(is_discount == 1){
                         	shopInfoHtml = '<span class="full-cut-price"><i class="icon iconfont item-full-cut">&#xe878;</i>全场'+discount+'折</span>';
                         }
-                        
+
                         html += '<a href="./index.php?c=dining&a=shopInfo&shop_id='+id+'" class="goods-list">'
                              + '<img src="'+thumb+'" class="goods-img" />'
                              + '<div class="goods-name limit-text">'+name+'</div>'
@@ -475,7 +477,7 @@ $(function(){
             $("#addCartModal").modal('show');
         }
     }
-    
+
     //商品属性选择事件
     function propertySelectedEvent(){
         $("#addCartModal .property-group-area").css("border","none");
@@ -536,7 +538,7 @@ $(function(){
         			subList = $.unique(subList.concat($.makeArray(value.ids)));
         		}
         	}
-        		
+
         });
         if(total_times > 1){
 	        $(".modal-show .property-group-area .goods-property-item li").each(function(){
@@ -548,7 +550,7 @@ $(function(){
 	        });
         }
     }
-    
+
     //根据属性生成属性选项
     function valueList(valueList){
     	var list = '';

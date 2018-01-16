@@ -43,7 +43,7 @@ function getAjaxOption(data,url,success,is_show){
 		    error:errorResponse
 		}
 	if(is_show == true){
-		
+
 		var hideOption = {
 			beforeSend: function(){
             	showDialog("#loadingDialog");//显示“加载中。。。”
@@ -81,6 +81,8 @@ function getPageOption(selector,option){
 		    },
 		    complete:function(){
 		    	pageOption.selector_img.hide();
+                alert($('.goods-area').html());
+                console.log($('.goods-area').html());
 		    	pageOption.selector.show();
 		    	get_more_top = pageOption.selector.offset().top;
 		    },
