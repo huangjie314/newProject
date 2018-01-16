@@ -1,0 +1,40 @@
+/*************************
+ ------我的佣金页面样式---
+ *************************/
+#container{
+    position: relative;
+}
+#container #content{
+    background: #F7F7F7;
+    position: relative;
+}
+.share-btn {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    bottom: 15%;
+}
+.guide {
+	display: none;
+    position: fixed;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+img.guide-image {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+    z-index: 999;
+    padding: 10px;
+}
+
+
+

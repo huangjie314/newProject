@@ -1,0 +1,217 @@
+/*******************************
+ -------我的技师页面样式--------
+ ---------author:jjhu-----------
+ -------data:2015-08-28---------
+ *******************************/
+body{
+	background: #f3f3f3;
+}
+#container{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    min-height: 300px;
+    overflow: visible;
+}
+/******------------top------------*******/
+.top{
+    zoom: 1;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    font-size: 16px;
+    padding: 0 15px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 1;
+}
+.top a{
+    display: inline-block;
+    height: 100%;
+    float: left;
+    color: #fff;
+    width: 10%;
+    text-align: left;
+    outline: none;
+    text-decoration: none;
+}
+.top a.right-icon{
+	text-align: right;
+}
+.top a.center{
+	text-align: center;
+ 	width: 80%;
+}
+.top .logo {
+	text-align: center;
+    color: #FFFFFF;
+    display: block;
+}
+.top{
+	position: relative;
+}
+.top{
+	position: relative;
+}
+.top-area{
+    margin: 0 -10px;
+    background-color: #19B4EA;
+    padding: 10px 0;
+}
+.top-area .head-image{
+    margin: 0px auto;
+    text-align: center;
+}
+.top-area .nickname{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+.top-area .head-image img{
+    height: 60px;
+    border-radius: 40px;
+}
+
+#content .address-top-area{
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #F0E8E8;
+}
+#content .address-top-area .back{
+    cursor: pointer;
+    padding-right: 5px;
+}
+#content .address-top-area .back i{
+	color: #009a44;
+}
+#content .address-top-area a{
+    text-decoration: none;
+    float: right;
+    color: #666;
+}
+#content .address-list{
+    padding: 5px 10px;
+    position: relative;
+}
+
+#content .address-list .address-area{
+    border-bottom: 1px solid #EEEEEE;
+    padding: 10px 0;
+    position: relative;
+}
+#content .address-list .select-area{
+    float: left;
+    width: 26px;
+    line-height: 45px;
+    text-align: center;
+}
+#content .address-list .phone{
+    margin-left: 50px;
+}
+#content .address-list .callname-phone-info{
+    line-height: 25px;
+}
+#content .address-list .edit{
+    position: absolute;
+    top:5px;
+    right: 0;
+}
+#content .address-info{
+    color: #666666;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#content .address-list a{
+    text-decoration: none;
+}
+#content .address-list .receiver-info{
+
+}
+.address-list .item-select i{
+    display: none;
+}
+.address-list .item-select i.selected{
+    color:#3BA93B;
+}
+.address-list .item-select i.un-selected,
+.address-list .item-delete i.un-selected
+{
+    color: #CCCCCC;
+}
+.address-list .item-delete i.selected,#selecAllDelete i.all-selected{
+    color: #FF8700;
+}
+#selecAllDelete i.not-all-selected{
+    color: #666;
+}
+#selecAllDelete span{
+    color: #666;
+}
+#selecAllDelete.all-selected span{
+    color: #F95858;
+}
+
+#content .address-list a i{
+    font-size: 18px;
+}
+
+#content .address-list .edit{
+    color: #AAAAAA;
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 45px;
+}
+
+
+.address-bottom-area{
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px -1px 0px #dcdcdc;
+}
+.address-bottom-area a{
+    height: 40px;
+    padding:0;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+}
+.address-bottom-area #defaultAddress span
+{
+    color: #666;
+    font-size: 14px;
+    background: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.address-bottom-area #addAddress span,
+.address-bottom-area #deleteAll span
+{
+    display: block;
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.address-bottom-area #addAddress span{
+    
+    background: #009a44;
+    width: 100%;
+    color: #fff;
+}
+.address-bottom-area #deleteAll span{
+    background: #CCCCCC;
+}
+.address-bottom-area #deleteAll span.can-use{
+    background: #FF8700;
+}

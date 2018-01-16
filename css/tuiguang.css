@@ -1,0 +1,248 @@
+/******所有活动的公用css*********
+ ***** @author joy**********
+ ***** @since 2016-10-13*****
+ ****************************/
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+.must-tag,.no-data{
+    color: #cc0000;
+}
+.no-data{
+	text-align:center;
+}
+a,a:hover{
+	text-decoration: none;
+}
+/******------------top------------*******/
+.top{
+    zoom: 1;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    font-size: 16px;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 640px;
+    z-index: 1;
+}
+.top a{
+    display: inline-block;
+    height: 100%;
+    float: left;
+    color: #fff;
+    width: 10%;
+    text-align: left;
+    outline: none;
+    text-decoration: none;
+}
+.top a.right-icon{
+	text-align: right;
+}
+.top a.center{
+	text-align: center;
+ 	width: 80%;
+}
+.top .logo {
+	text-align: center;
+    color: #FFFFFF;
+    display: block;
+}
+.text-danger{
+	padding: 10px;
+}
+#container{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    overflow: visible;
+}
+.container-fluid{
+    padding:0;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+#page-selection{
+    height: 34px;
+}
+#page-selection:after{
+    content: "";
+    clear: both;
+}
+#page-selection ul.bootpag{
+    float: left;
+    margin:0;
+}
+#page-selection .text-desc-area{
+    float: left;
+    margin-left: 15px;
+    height: 100%;
+    line-height: 34px;
+}
+/******------------footer 页脚------------*******/
+#footer{
+    padding: 15px 0 55px;
+    text-align: center;
+    background: #fafafa;
+    color: #CCCCCC;
+}
+#footer .quick-action{
+	margin-bottom: 10px;
+}
+#footer .quick-action a {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 4px;
+    color: #AAAAAA;
+}
+#footer .copyright a{
+    color: #CCCCCC;
+}
+/*******---------底部导航---------********/
+.bottom-nav{
+    display: none;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    box-shadow: 0 -1px  #ddd;
+    -moz-box-shadow: 0 -1px  #eee;
+    overflow: hidden;
+}
+.bottom-nav a{
+    text-align: center;
+    color: #000;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    padding: 0;
+    height: 50px;
+}
+.bottom-nav a.current {
+    color: #FF5C00;
+}
+.bottom-nav .home i,.bottom-nav .mycart i{
+    font-size: 20px;
+}
+.bottom-nav .nav-icon{
+    line-height: 35px;
+    height: 30px;
+}
+.bottom-nav .nav-name {
+    font-size: 12px;
+    line-height: 15px;
+    height: 20px;
+}
+.bottom-nav .item {
+    border-left: 1px solid #FFFFFF;
+}
+.bottom-nav .cart-icon {
+    position:relative;
+}
+.bottom-nav .cart-icon .cart-num{
+    position:absolute;
+	display:inline-block;
+	width:20px;
+	line-height:20px;
+	background-color:red;
+	border-radius:50%;
+	right:-10px;
+	top:-10px;
+	color:#fff;
+	font-size:10px;
+}
+
+#page-selection{
+    padding: 0 10px;
+}
+/**排序条**/
+#content .goods-sort-area{
+	height: 36px;
+	line-height: 36px;
+	margin-bottom:10px;
+}
+#content .goods-sort-area span{
+	text-align: center;
+	font-size:16px;
+	background: #EEEEEE;
+	border: 1px solid #f7f7f7;
+	margin: 0;
+	cursor: pointer;
+}
+#content .sort-selected{
+	color: #FF5C00;
+}
+/******------------底部导航------------*******/
+   .bottomNav {
+    max-width: 640px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    z-index: 10;
+}
+
+.bottomNav a.nav {
+    width: 33.333%;
+}
+.bottomNav a.opeartion-1 {
+    background: #aaaaaa;
+}
+
+.bottomNav a.operation {
+    font-size: 16px;
+    padding: 0;
+    color: #fff;
+}
+
+.bottomNav a {
+    text-decoration: none;
+    display: block;
+    float: left;
+    width: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    padding-left: 30px;
+}
+/******------------header 页头------------*******/
+#header{
+    height: 40px;
+    line-height: 40px;
+    background: #444;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+#header a{
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+}
+#header .back{
+    position: absolute;
+    left: 0px;
+    width: 30px;
+}
+#header a.weimall{
+    font-size: 14px;
+    width: 30%;
+}
+
