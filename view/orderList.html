@@ -44,6 +44,603 @@
             <span class="head-item " data-status="5">已完成</span>
         </div>
         <div class="content-wrap">
+            <div class="order-list-wrap" data-id="1">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">待支付</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">商家迟迟不接单，我要取消订单</span>
+                    <span class="active-btn sender-btn refuse-btn active" data-status="6">取消订单</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="2">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">待接单</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">预定送达</span>
+                        <span class="order-text">10:00</span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">牛肉汉堡</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">16</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="javascript:;" class="order-share-over btn">分享红包<a>
+                                <a href="./index.php?c=dining&a=userComplain&type=0&oid='+id+'" class="complain-btn btn">我要投诉<a>
+                                <div class="shop-discount"><span class="item">满减优惠&nbsp;</span><span class="item-price">- 10</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">16</span><span class="person-count">（1人餐）</span>
+                                </div>
+                               <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area no-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe68e;</i><span class="status-info">等不及啦！赶紧付款吧？</span>
+                    <a class="active-btn active" href="./pay/request/code.php?&oid='+obj.id+'&module=diningPay">立即支付</a>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">我不想付款了</span>
+                    <span class="active-btn delete-btn active">删除订单</span>'
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="3">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">待派单</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">time_text</span>
+                        <span class="order-text">time</span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，我要活的</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                   <div class="dining-list">
+                        <span class="dining-name">活鸡</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">300</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="javascript:;" class="order-share-over btn">分享红包<a>
+                                <a href="./index.php?c=dining&a=userComplain&type=0&oid='+id+'" class="complain-btn btn">我要投诉<a>
+                                <div class="shop-discount"><span class="item">满减优惠&nbsp;</span><span class="item-price">- 100</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">300</span><span class="person-count">（3人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">此订单已经处理完毕</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="4">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">待取餐</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">time_text</span>
+                        <span class="order-text">time</span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">活鸡</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">300</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="javascript:;" class="order-share-over btn">分享红包<a>
+                                <a href="javascript:;" class="complain-cancel-btn btn">取消投诉<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 100</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">20</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area no-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">申请退款</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="5">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">送餐中</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">time_text</span>
+                        <span class="order-text">time</span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">活鸡</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">300</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="javascript:;" class="order-share-over btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 100</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">100</span><span class="person-count">（2人餐）</span>
+                                </div>
+                               <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area no-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">退款成功</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="6">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">交易成功</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="7">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">交易取消</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">退款失败</span>
+                </div>
+
+            </div>
+            <div class="order-list-wrap" data-id="8">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">商家取消</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">商家迟迟不接单，我要取消订单</span>
+                    <span class="active-btn sender-btn refuse-btn active" data-status="6">取消订单</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="9">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">申请退款</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">商家迟迟不接单，我要取消订单</span>
+                    <span class="active-btn sender-btn refuse-btn active" data-status="6">取消订单</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="10">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">退款成功</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">商家迟迟不接单，我要取消订单</span>
+                    <span class="active-btn sender-btn refuse-btn active" data-status="6">取消订单</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="11">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color">退款失败</span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">商家迟迟不接单，我要取消订单</span>
+                    <span class="active-btn sender-btn refuse-btn active" data-status="6">取消订单</span>
+                </div>
+            </div>
+            <div class="order-list-wrap" data-id="12">
+                <div class="order-list order-item">
+                        <span class="left-name">订单编号</span>
+                        <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                            <span class="order-num">20040606<span class="status-color"></span></span>
+                        </a>
+                </div>
+                <div class="order-list order-item">
+                        <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                        <span class="left-name">送达时间</span>
+                        <span class="order-text">9:30 <!-- obj.end_time||"--" --></span>
+                        <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+               <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，多加点菜</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span><span class="shop-name limit-text last-item">江西师大四食堂</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span><span class="order-sender active limit-text last-item"> <a href="tel:'+shop_phone+'">15070849111</a></span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe7c9;</i>送餐人员</span><span class="order-sender active limit-text last-item">张三( <a href="tel:13263919118">13263919118</a>)</span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">40</span>
+                    </div>
+                                <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                                <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                                <a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>
+                                <div class="shop-discount"><span class="item">折扣优惠&nbsp;</span><span class="item-price">- 1</span></div>
+                                <div class="dining-last">
+                                    <i class="icon iconfont">&#xe604;</i><span class="total-price">40</span><span class="person-count">（1人餐）</span>
+                                </div>
+                                <div class="zan-area"><div class="zan-title">给骑手点赞</div><div class="demo zan-btn-area already-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div></div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">商家迟迟不接单，我要取消订单</span>
+                    <span class="active-btn sender-btn refuse-btn active" data-status="6">取消订单</span>
+                </div>
+            </div>
             <div id="get-more"></div>
         </div>
     </div>

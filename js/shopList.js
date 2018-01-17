@@ -11,7 +11,7 @@ $(function(){
      * 初始化
      */
     function init(){
-        getPageOption($("#get-more"),{});
+       /* getPageOption($("#get-more"),{});*/
     	isPageScroll(function(){render(0)});
         bindEvent();
         render(1);
@@ -59,12 +59,12 @@ $(function(){
 	    			$(".top-area .top-item .select").removeClass("rerotate").addClass("rotate");
 	    			$("#container .label-area").removeClass("hidden").fadeIn(250);
 	    			_this.addClass("active");
-	    			
+
 	    		}
-	    		
+
     		}
     	})
-    	
+
     	//点击标签
     	$("#container .label-area .label-list").click(function(){
     		var _this = $(this);
@@ -74,7 +74,7 @@ $(function(){
     		_this.addClass("active").parents(".label-area").fadeOut(250).delay(250).addClass("hidden");
     		render(1);
     	});
-    	
+
     	//搜索
     	$(".search-area .search-btn").click(function(){
             render(1);
@@ -87,17 +87,17 @@ $(function(){
             }
         });
 	}
-    
+
     /**
      * 分页动态渲染数据
      * @param int type    0下拉1点击
      */
-    function render(type){ 
+    function render(type){
     	if(type == 1){
     		pageOption.page_num = 0;
     		pageOption.selector.prevAll().remove();
     	}
-    	
+
     	var id = $(".label-area .label-list.active").attr("data-gids");
     	var shop_name = $(".search-area .search-input").val().trim();
     	var sort = $(".top-area .rank").hasClass('active') ? 1 : 0;
@@ -121,21 +121,6 @@ $(function(){
                     for(var i = 0; i < myList.length;i++){
                     	var obj = myList[i];
                     	var id = obj.id;
-//                  	var maleSender = obj.maleSender;
-//                      var femaleSender = obj.femaleSender;
-//                      var maleSenderHtml = "";
-//                      var femaleSenderHtml = "";
-//                      if(maleSender == 0){
-//                     		maleSenderHtml = '<span style="color:red;">无</span>';
-//                      }else{
-//                      	maleSenderHtml = '<span style="color:green;">有</span>';
-//                      }
-//                      if(femaleSender == 0){
-//                      	femaleSenderHtml = '<span style="color:red;">无</span>';
-//                      }else{
-//                      	femaleSenderHtml = '<span style="color:green">有</span>';
-//                      }
-                        
                         var shopMessage = "";
 						var sexHtml = "";
 						if(is_plate_time == 1){//超级邦订餐时间
@@ -160,7 +145,7 @@ $(function(){
 						}
                         var score = obj.score;
                         var star = obj.star;
-                        
+
                         var starHtml = '';
                         if(star > 0){
                         	var unstar = 7 - star;
@@ -172,7 +157,7 @@ $(function(){
                         	}
                         	starHtml += '<em style="color:green; padding-left:0px;font-size:16px;">'+score+'分</em>';
                         }
-                        
+
                         var shopInfoHtml = "";
                         var discount = (obj.discount*10).toFixed(1);
                         var full_cut = obj.full_cut;
@@ -211,6 +196,6 @@ $(function(){
         }
         $.ajax($.extend(pageForm,scrollForm));
     }
-    
+
     init();
 });

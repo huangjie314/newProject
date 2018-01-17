@@ -9,7 +9,7 @@ $(function(){
      * 初始化
      */
     function init(){
-    	getPageOption($("#get-more"),{});
+    	/*getPageOption($("#get-more"),{});*/
     	isPageScroll(function(){render(0)});
         bindEvent();
         render(1);
@@ -26,7 +26,7 @@ $(function(){
     		_this.addClass("active");
     		render(1);
     	})
-    	
+
     	//删除（假删）
     	$("#container .content-wrap").on("click",".delete-btn",function(){
     		var _this = $(this);
@@ -43,7 +43,7 @@ $(function(){
 		    	});
 	    	});
     	});
-    	
+
     	//改变订单状态
     	$("#container .content-wrap").on("click",".refuse-btn.active",function(){
     		var _this = $(this);
@@ -63,7 +63,7 @@ $(function(){
 		    	});
 	    	});
     	});
-    	
+
     	//取消投诉
     	$("#container .content-wrap").on("click",".complain-cancel-btn.btn",function(){
     		var _this = $(this);
@@ -82,7 +82,7 @@ $(function(){
 		    	});
 	    	});
     	});
-    	
+
     	//点赞
     	$("#container .content-wrap").on("click",".no-zan",function(){
 			var _this = $(this);
@@ -93,12 +93,12 @@ $(function(){
 	    		if(result.errorCode == 0){//成功
 			    	_this.removeClass('no-zan');
 					_this.addClass('already-zan');
-					var x = 100;       
-		     		var y = 200;  
+					var x = 100;
+		     		var y = 200;
 		       		var num = Math.floor(Math.random() * 2 + 1);
 		       		var index=$('.demo').children('img').length;
-		       		var rand = parseInt(Math.random() * (x - y + 1) + y); 
-		       		
+		       		var rand = parseInt(Math.random() * (x - y + 1) + y);
+
 		       		_this.append("<img src='./template/front/dining/ma16001/image/1.png'>");
 		       		$("img").animate({
 		       			bottom:"800px",
@@ -110,26 +110,27 @@ $(function(){
 	    		}
 	    	});
     	});
-    	
-    	
-    	
+
+
+
 	}
-    
+
     /**
      * 分页动态渲染数据
      * @param int type    0下拉1点击
      */
-    function render(type){ 
+    function render(type){
     	if(type == 1){
     		pageOption.page_num = 0;
     		pageOption.selector.prevAll().remove();
     	}
-    	
+
         var selectInfo = {
         	status:$(".head-nav .head-item.active").attr("data-status"),
         };
         selectInfo.page_num = pageOption.page_num;
         selectInfo.page_size = pageOption.page_size;
+        alert(selectInfo);
         pageForm = {
             url:"./index.php?c=dining&a=pagingOrder",
             data:selectInfo,
@@ -194,7 +195,7 @@ $(function(){
                     		}else if(r_state == 1){
                     			sender_html += '<a href="javascript:;" class="order-share-over btn">分享红包<a>';
                     		}
-                    		
+
                     		if(status >= 5){
                     			if(obj.sender_id){
 	                    			if(obj.user_complain_id == 0){
@@ -214,10 +215,10 @@ $(function(){
                     				sender_html += '<a href="tel:'+obj.shop_phone+'" class="call-sender-btn btn">一键催单<a>';
 //                  			}
                     		}
-                    		
-                    		
+
+
                     	}
-                    	
+
                     	var discount_money = obj.discount_money;
 	                    var	cut_money = obj.cut_money;
 	                    var	shopDiscountHtml = "";
@@ -226,7 +227,7 @@ $(function(){
                     	}else if(cut_money != 0 && cut_money != null && cut_money != ""){
                     		shopDiscountHtml = '<div class="shop-discount"><span class="item">满减优惠&nbsp;</span><span class="item-price">- '+cut_money+'</span></div>';
                     	}
-                    	
+
                     	var shop_phone = obj.shop_phone||'--';
                     	//送餐员隐藏
                     	var sender_class = '';
@@ -237,7 +238,7 @@ $(function(){
 				    			+ '<span class="left-name">备注信息</span>'
 				    			+ '<span class="order-text limit-text message">'+obj.message+'</span>'
 					    		+ '</div>' : '';
-                    	
+
                 		html += '<div class="order-list-wrap" data-id="'+id+'">'
 	    						+ '<div class="order-list order-item">'
 	    						+ '<span class="left-name">订单编号</span>'
