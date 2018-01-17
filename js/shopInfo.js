@@ -26,7 +26,7 @@ $(function(){
     		if(_this.hasClass("active")){
     			return false;
     		}
-    		
+
     		if(_this.hasClass('fir')){
     			$('.dining-wrap .cate-list.active').removeClass('active');
     		}else if(_this.hasClass('sec')){
@@ -54,7 +54,7 @@ $(function(){
     		cid = _this.attr("data-id");
     		render();//渲染页面
     	})
-    	
+
     	//点击减数量
 	    $("#container").on("click",".minus",function(){
 	    	var _this = $(this);
@@ -70,7 +70,7 @@ $(function(){
 	    	}
 	    	renderCartData(gid,num,0,0);
 	    });
-	    
+
 	    //数量加
 	    $("#container").on("click",".add",function(){
 	    	var _this = $(this);
@@ -83,7 +83,7 @@ $(function(){
     		$(".dining-area .minus[data-id='"+gid+"'],.dining-area .goods-num[data-id='"+gid+"']").removeClass("hidden").fadeIn()
 	    	renderCartData(gid,num,1,0);
 	    });
-        
+
         //关闭开启购物车列表
         $(".cart-wrap").click(function(){
         	$(".cartList-wrap").fadeToggle();
@@ -91,7 +91,7 @@ $(function(){
         $(".shut-off").click(function(){
         	$(".cartList-wrap").fadeOut();
         })
-        
+
         //清空购物侧
         $("#container .cartList-wrap .clear-cart").click(function(){
         	var _this = $(this);
@@ -110,7 +110,7 @@ $(function(){
         		})
         	}
         });
-        
+
         //点击去付款
         $("#container .bottomNav").on("click",".payment.able.active",function(){
         	window.location.href = "./index.php?c=dining&a=confirmOrder&shop_id="+shop_id;
@@ -132,7 +132,7 @@ $(function(){
         	$('.cart-wrap').hide();
         });
 	}
-    
+
     /**
      * 维护相关数据
      */
@@ -150,18 +150,18 @@ $(function(){
 			$("#container .cart-wrap .num").text(total_num);
 			$("#container .bottomNav .cart-total-price").text(total_price);
 			var _pay = $("#container .bottomNav .payment");
-			
+
 			if(total_price > 0){
 				_pay.addClass("active");
 			}else{
 				_pay.removeClass("active");
 			}
-    		
+
     		if(result.errorCode == 0){//有结果
     			for(i = 0;i<result.data.subList.length;i++){
     				var obj = result.data.subList[i];
 	    			var id = obj.id;
-	    			
+
 	    			html += '<tr>'
 	        				+ '<td class="col-1">'+obj.name+'</td>'
 	        				+ '<td class="col-2"><i class="icon iconfont">&#xe604;</i>'+obj.price+'<span class="unit">/份</span></td>'
@@ -181,7 +181,7 @@ $(function(){
     		render();
     	},false);
     }
-    
+
     /**
      * 渲染商品
      */
