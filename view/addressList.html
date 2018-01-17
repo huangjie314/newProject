@@ -2,10 +2,6 @@
 <html lang="zh-cn">
 <head>
     <title>收货地址</title>
-
-
-    <!--2016-08-24 the lastest version designed by joy of change-->
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -14,10 +10,8 @@
     <meta name="author" content="安徽千界信息科技有限公司">
     <meta name="robots" content="index,follow">
     <meta name="application-name" content="www.changekeji.com">
-
     <link rel="stylesheet"  href="../css/iconfont.css">
     <link rel="stylesheet"  href="../css/common.css">
-
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
     <link rel="stylesheet"  href="../css/common.css">
      <link rel="stylesheet" href="../css/base.css">
@@ -30,16 +24,43 @@
         <!--主体内容-->
         <div id="content" style="background: #f3f3f3;">
             <div class="address-top-area">
-                <span class="back"><i class="icon iconfont">&#xe653;</i></span><span>地址列表</span><a href="javascript:;" class="complete" style="display: none;">完成</a><a href="javascript:;" class="edit" style="display: block;">编辑</a>
+                <span class="back">
+                    <i class="icon iconfont">&#xe653;</i>
+                </span>
+                <span>地址列表</span>
+                <a href="javascript:;" class="complete" style="display: none;">完成</a>
+                <a href="javascript:;" class="edit" style="display: block;">编辑</a>
             </div>
             <div class="address-list">
-                <p class="text-danger">暂无地址。</p>
+                <div class="address-area" data-id="1">
+                    江西师大
+                </div>
+                <div class="address-info">
+                    瑶湖校区
+                </div>
+                <div class="phone">15070849147</div>
+                <div class="callname-phone-info">15070849147</div>
+                <i class="icon iconfont icon-edit"></i>
+                <i class="icon iconfont all-selected" style="display: none;">&#xe698;</i>
+                <i class="icon iconfont not-all-selected">&#xe618;</i>
+                <span class="item-select" style='display: block;'>
+                    <i class="icon iconfont selected">&#xe618;</i>
+                </span>
+                <div class="item-delete">
+                删除
+                </div>
+                <div class="select-area">
+                    广东省
+                </div>
+                <!-- <p class="text-danger">暂无地址。</p> -->
 
             </div>
         </div>
         <div class="address-bottom-area">
             <div class="cf">
-                <a class="col-xs-6 col-sm-6 col-md-6" id="addAddress" href="./addAddress.html"><span class="can-use">新增收货地址</span></a>
+                <a class="col-xs-6 col-sm-6 col-md-6" id="addAddress" href="./addAddress.html">
+                    <span class="can-use">新增收货地址</span>
+                </a>
                 <a class="col-xs-6 col-sm-6 col-md-6" id="defaultAddress" href="javascript:;">
                     <span>设为默认地址</span>
                 </a>
@@ -49,7 +70,9 @@
                     <i class="icon iconfont not-all-selected">&#xe618;</i>
                     <span class="select-all-text">全选</span>
                 </a>
-                <a class="col-xs-6 col-sm-6 col-md-6"id="deleteAll" style="display: none;" href="javascript:;"><span>删除</span></a>
+                <a class="col-xs-6 col-sm-6 col-md-6"id="deleteAll" style="display: none;" href="javascript:;">
+                    <span>删除</span>
+                </a>
             </div>
         </div>
     </div>
