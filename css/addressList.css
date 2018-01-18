@@ -77,6 +77,8 @@ body{
     border-radius: 40px;
 }
 
+
+
 #content .address-top-area{
     padding: 10px;
     background: #fff;
@@ -94,6 +96,8 @@ body{
     float: right;
     color: #666;
 }
+
+
 #content .address-list{
     padding: 5px 10px;
     position: relative;
@@ -170,6 +174,8 @@ body{
 }
 
 
+
+
 .address-bottom-area{
     z-index: 10;
     position: fixed;
@@ -204,7 +210,7 @@ body{
     font-size: 14px;
 }
 .address-bottom-area #addAddress span{
-    
+
     background: #009a44;
     width: 100%;
     color: #fff;

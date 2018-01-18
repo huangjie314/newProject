@@ -1,6 +1,12 @@
 $(function(){
+<<<<<<< HEAD
+	var referer = "https://cjb.huimaibuy.com/index/php?c=dining&a=userCenter";
+    /*document.referrer*/
+=======
 	/*var referer = document.referrer;*/
-    var referer = "https://cjb.huimaibuy.com/index/php?c=dining&a=userCenter"    alert(referer);//referer = https://cjb.huimaibuy.com/index/php?c=dininga=userCenter
+    var referer = "https://cjb.huimaibuy.com/index/php?c=dining&a=userCenter"
+>>>>>>> fc2508016310983300f0a00b55bfa6b405040ff9
+    alert(referer);//referer = https://cjb.huimaibuy.com/index/php?c=dininga=userCenter
     var params = referer.split("?")[1];
     var obj = unserialize(params);
     var c = obj.c;//是否需要重定向
