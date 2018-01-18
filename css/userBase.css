@@ -1,0 +1,230 @@
+/******所有活动的公用css*********
+ ***** @author joy**********
+ ***** @since 2016-11-03*****
+ ****************************/
+body{
+	background: #f3f3f3;
+	margin: auto;
+}
+#container{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    min-height: 300px;
+    overflow: visible;
+}
+a,a:hover{
+	text-decoration: none;
+}
+.goods-count-area a{
+	text-decoration: none;
+}
+.refresh{
+	cursor: pointer;
+}
+.limit-text{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/******------------top------------*******/
+.top{
+    zoom: 1;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    font-size: 16px;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 640px;
+    z-index: 1;
+}
+.top a{
+    display: inline-block;
+    height: 100%;
+    float: left;
+    color: #fff;
+    width: 10%;
+    text-align: left;
+    outline: none;
+    text-decoration: none;
+}
+.top a.right-icon{
+	text-align: right;
+}
+.top a.center{
+	text-align: center;
+ 	width: 80%;
+}
+.top .logo {
+	text-align: center;
+    color: #FFFFFF;
+    display: block;
+}
+/******------------搜索-----------*******/
+.search-wrap{
+	padding: 10px;
+	width: 100%;
+	max-width: 640px;
+	z-index: 1;
+	position: relative;
+}
+.search-wrap input{
+	width: 82%;
+	padding: 8px 0;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	text-indent: 30px;
+	outline: none;
+	border: 0;
+	line-height: 20px;
+	font-size: 14px;
+	margin: 0;
+}
+.search-wrap .search-btn{
+	width: 18%;
+	display: inline-block;
+	float: right;
+	line-height: 36px;
+	text-align: center;
+	background: #24b24e;
+	color: #fff;
+	font-size: 14px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.search-wrap i{
+	font-size: 20px;
+	height: 30px;
+	position: absolute;
+	top: 12px;
+	left: 15px;
+	color: #999;
+	cursor: pointer;
+}
+/******------------幻灯片-----------*******/
+#content .swiper-container .swiper-slide img{
+	display: block;
+	width: 100%;
+}
+/******------------底部导航------------*******/
+.bottomNav{
+	max-width: 640px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	z-index: 10;
+}
+.bottomNav a{
+	text-decoration: none;
+	display: block;
+	float: left;
+	width: 50%;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background: #24b24e;
+	padding-left: 30px;
+}
+.bottomNav a i{
+	font-size: 22px;
+	color: #fff;
+	margin-right: 5px;	
+}
+.bottomNav a.buy{
+	background: #06683f;
+}
+
+/*******---------底部导航2---------********/
+.bottom-nav{
+    display: none;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    box-shadow: 0 -1px  #ddd;
+    -moz-box-shadow: 0 -1px  #eee;
+    overflow: hidden;
+}
+.bottom-nav a{
+    text-align: center;
+    color: #000;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    padding: 0;
+    height: 50px;
+}
+.bottom-nav a.current {
+    color: #FF5C00;
+}
+.bottom-nav .home i,.bottom-nav .mycart i{
+    font-size: 20px;
+}
+.bottom-nav .nav-icon{
+    line-height: 35px;
+    height: 30px;
+}
+.bottom-nav .nav-name {
+    font-size: 12px;
+    line-height: 15px;
+    height: 20px;
+}
+.bottom-nav .item {
+    border-left: 1px solid #FFFFFF;
+}
+.bottom-nav .cart-icon {
+    position:relative;
+}
+.bottom-nav .cart-icon .cart-num{
+    position:absolute;
+	display:inline-block;
+	width:20px;
+	line-height:20px;
+	background-color:red;
+	border-radius:50%;
+	right:-10px;
+	top:-10px;
+	color:#fff;
+	font-size:10px;
+}
+
+#page-selection{
+    padding: 0 10px;
+}
+/******------------header 页头------------*******/
+#header{
+    height: 40px;
+    line-height: 40px;
+    background: #444;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+#header a{
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+}
+#header .back{
+    position: absolute;
+    left: 0px;
+    width: 30px;
+}
+#header a.weimall{
+    font-size: 14px;
+    width: 30%;
+}

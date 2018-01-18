@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>添加新地址</title>
+    <title>编辑地址</title>
     <link rel="stylesheet" href='../css/sm.min.css'>
-
-
-    <!--2016-08-24 the lastest version designed by joy of change-->
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -17,39 +13,45 @@
     <meta name="application-name" content="www.changekeji.com">
 
     <link rel="stylesheet"  href="../css/iconfont.css">
-    <link rel="stylesheet"  href="../css/common.css">
-
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
     <link rel="stylesheet"  href="../css/common.css">
      <link rel="stylesheet" href="../css/userBase.css">
-    <link rel="stylesheet"  href="../css/addAddress.css">
+    <link rel="stylesheet"  href="../css/base.css">
+    <link rel="stylesheet"  href="../css/editAddress.css">
 </head>
 
 <body>
     <!--主容器-->
-    <div id="container" style="background: #fff;"
+    <div id="container">
         <!--主体内容-->
-        <div id="content">
+        <div id="content" style="background: #fff;">
+            <div class="top-area" style="display: none;">
+                <div class="head-image"><img src="http://wx.qlogo.cn/mmopen/u2hicLTTQDgb1xvekwpDvGz8l4Z3lemetEl0aJ1J3R0sd9kR699aNPZ7fg78Hj8hl6E8ficxZ4SWbc1tDoRSXOjWnIMSrK2Qow/132"></div>
+                <div class="nickname"><span>哎呦喂</span></div>
+            </div>
+            <div class="address-top-area">
+                <span class="back"><i class="icon iconfont">&#xe62a;</i></span><span>编辑地址</span>
+            </div>
             <div class="address-wrap">
                  <table cellspacing="0">
                     <tbody>
                         <tr class="tr">
-                            <td class="col-1">联系人：</td><td class="col-2"><input type="text" class="callname" placeholder="请输入姓名" value=""></td>
+                            <td class="col-1">联系人：</td><td class="col-2"><input type="text" class="callname" placeholder="请输入姓名" value="黄先生"></td>
                         </tr>
                         <tr class="tr">
-                            <td class="col-1">手机号：</td><td class="col-2"><input type="text" class="phone" placeholder="请输入手机号码" value=""></td>
+                            <td class="col-1">手机号：</td><td class="col-2"><input type="text" class="phone" placeholder="请输入手机号码" value="13263919118"></td>
                         </tr>
                         <tr class="tr addr">
-                            <td class="col-1">地址：</td><td class="col-2"><input type="hidden" class="sex"><input type="text" id="addr" placeholder="请选择学校楼栋"  value=""><div class="arrow-down"></div></td>
+                            <td class="col-1">地址：</td><td class="col-2"><input type="hidden" class="sex" value="1"><input type="text" id="addr" placeholder="请选择所在楼栋"  value="1(男宿舍)"><div class="arrow-down"></div></td>
                         </tr>
                         <tr class="tr detail">
-                            <td class="col-1"></td><td class="col-2"><input type="text" id="detail" placeholder="请输入具体的宿舍号"></td>
+                            <td class="col-1"></td><td class="col-2"><input type="text" id="detail" placeholder="请输入详细的地址信息" value="N443"></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="2">
-                                <a class="btn btn-primary add-address btn-sm">保存</a>
+                                <a class="btn btn-primary btn-sm save-address" data-id="4273">保存</a>
                                 <a class="btn btn-default btn-sm back" href="javascript:window.history.back(-1);">返回</a>
                             </td>
                         </tr>
@@ -277,8 +279,7 @@
     <script type='text/javascript' src='../js/Zepto.js'></script>
     <script type='text/javascript' src='../js/sm.min.js'></script>
     <script type='text/javascript' src='../js/sm-extend.min.js'></script>
-    <script type='text/javascript' src='../js/sm-city-picker.min.js'></script>
-    <script type="text/javascript" src="../js/addAddress.js"></script>
+    <script type="text/javascript" src="../js/editAddress.js"></script>
 
 </body>
 </html>

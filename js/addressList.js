@@ -1,6 +1,7 @@
 $(function(){
 	/*var referer = document.referrer;*/
-    var referer = "https://cjb.huimaibuy.com/index/php?c=dining&a=userCenter"    alert(referer);//referer = https://cjb.huimaibuy.com/index/php?c=dininga=userCenter
+    var referer = "https://cjb.huimaibuy.com/index/php?c=dining&a=userCenter";
+    alert(referer);//referer = https://cjb.huimaibuy.com/index/php?c=dininga=userCenter
     var params = referer.split("?")[1];
     var obj = unserialize(params);
     var c = obj.c;//是否需要重定向

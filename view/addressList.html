@@ -14,7 +14,7 @@
     <link rel="stylesheet"  href="../css/common.css">
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
     <link rel="stylesheet"  href="../css/common.css">
-     <link rel="stylesheet" href="../css/base.css">
+     <!-- <link rel="stylesheet" href="../css/userBase.css"> -->
     <link rel="stylesheet"  href="../css/addressList.css">
 </head>
 
@@ -32,26 +32,56 @@
                 <a href="javascript:;" class="edit" style="display: block;">编辑</a>
             </div>
             <div class="address-list">
- <div class="address-area" data-id="1">
-                    江西师大
-                </div>
-                <div class="address-info">
-                    瑶湖校区
-                </div>
-                <div class="phone">15070849147</div>
-                <div class="callname-phone-info">15070849147</div>
-                <i class="icon iconfont icon-edit"></i>
-                <i class="icon iconfont all-selected" style="display: none;">&#xe698;</i>
-                <i class="icon iconfont not-all-selected">&#xe618;</i>
-                <span class="item-select" style='display: block;'>
-                    <i class="icon iconfont selected">&#xe618;</i>
-                </span>
-                <div class="item-delete">
-                删除
-                </div>
-                <div class="select-area">
-                    广东省
-                </div>
+                  <div class="address-area clearfix" data-id="4273">
+                        <!--选择区域-->
+                        <div class="select-area">
+                            <a class="item-select selected" href="javascript:;">
+                                <i class="icon iconfont selected"style="display:inline;">&#xe621;</i>
+                                <i class="icon iconfont un-selected">&#xe622;</i>
+                            </a>
+                            <a class="item-delete" style="display: none;" href="javascript:;">
+                                <i class="icon iconfont un-selected">&#xe618;</i>
+                                <i class="icon iconfont selected">&#xe621;</i>
+                            </a>
+                        </div>
+                        <!--收货信息-->
+                        <div class="receiver-info">
+                            <div class="callname-phone-info">
+                                <span class="callname">收货人：黄先生</span>
+                                <span class="phone">13263919118</span>
+                                <a class="edit" href="./editAddress.html" data-id="4273"><i class="icon iconfont">&#xe654;</i></a>
+                            </div>
+                            <!--地址信息-->
+                            <div class="address-info">
+                                    1(男宿舍)N443
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-area clearfix" data-id="4274">
+                        <!--选择区域-->
+                        <div class="select-area">
+                            <a class="item-select " href="javascript:;">
+                                <i class="icon iconfont selected">&#xe621;</i>
+                                <i class="icon iconfont un-selected"style="display:inline;">&#xe622;</i>
+                            </a>
+                            <a class="item-delete" style="display: none;" href="javascript:;">
+                                <i class="icon iconfont un-selected">&#xe618;</i>
+                                <i class="icon iconfont selected">&#xe621;</i>
+                            </a>
+                        </div>
+                        <!--收货信息-->
+                        <div class="receiver-info">
+                            <div class="callname-phone-info">
+                                <span class="callname">收货人：黄小强</span>
+                                <span class="phone">13263919118</span>
+                                <a class="edit" href="./editAddress.html" data-id="4274"><i class="icon iconfont">&#xe654;</i></a>
+                            </div>
+                            <!--地址信息-->
+                            <div class="address-info">
+                                    2(男宿舍)s258
+                            </div>
+                        </div>
+                    </div>
                 <!-- <p class="text-danger">暂无地址。</p> -->
             </div>
         </div>
