@@ -1,11 +1,7 @@
-<!--用户登录-->
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>巢湖学院-订餐首页</title>
-
-    <!--2015-07-20 the lastest version designed by jjhu of change-->
-
+    <title>商品详情</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -14,9 +10,6 @@
     <meta name="author" content="安徽千界信息科技有限公司">
     <meta name="robots" content="index,follow">
     <meta name="application-name" content="www.changekeji.com">
-
-    <!--2016-08-24 the lastest version designed by joy of change-->
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -32,120 +25,108 @@
     <link rel="stylesheet" href="../css/base.css">
 
     <link rel="stylesheet"  href="../css/swiper.min.css">
-    <link rel="stylesheet"  href="../css/index.css">
+    <link rel="stylesheet"  href="../css/goodsDetail.css">
 </head>
 
 <body>
-<!--主容器-->
-<div id="container" class="container-fluid">
-        <!--幻灯片轮播-->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="http://cjb.huimaibuy.com/index.php?c=base_user&a=rechargePay&moduleName=">
-                    <img src="../image/20170718134433734.jpg">
-                </a>
-            </div>
-        </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-    </div>
+    <!--主容器-->
+    <div id="container" class="container-fluid">
+        <!--页面头部-->
 
-    <div class="label-area">
-                <a href="./index.php?c=dining&a=shopList&label_id=32" class="label-list">
-            <img src="../image/20170313085020652.png" class="label-img" />
-            <span class="limit-text label-name">中餐</span>
-        </a>
-                <a href="./index.php?c=dining&a=shopList&label_id=31" class="label-list">
-            <img src="../image/20170313085040919.png" class="label-img" />
-            <span class="limit-text label-name">西餐</span>
-        </a>
-                <a href="./index.php?c=dining&a=shopList&label_id=33" class="label-list">
-            <img src="../image/20170313085107379.png" class="label-img" />
-            <span class="limit-text label-name">火锅</span>
-        </a>
-                <a href="./index.php?c=dining&a=shopList&label_id=34" class="label-list">
-            <img src="../image/20170313085123193.png" class="label-img" />
-            <span class="limit-text label-name">小吃</span>
-        </a>
-                <a href="./index.php?c=dining&a=shopList&label_id=35" class="label-list">
-            <img src="../image/20170313085137159.png" class="label-img" />
-            <span class="limit-text label-name">甜品</span>
-        </a>
+        <!--主体内容-->
+        <div id="content" class="content-goodsDetail">
+            <!--商品详情-->
+            <!--幻灯片轮播-->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                       <img src="../image/20170718134433734.jpg">
+                    </div>
+                <!-- 如果需要分页器 -->
+                </div>
+            <!--商品信息-->
+            <div class="goods-info">
+                <input type="hidden" id="standard" value="">
+                <div class="desc">
+                    <span class="name">辣椒炒肉</span>
+                    <span class="simple_desc"></span>
+                </div>
+                <div class="price">
+                    <span class="inventory-area-wrap">
+                        <span class="inventory-area">近期共售出：&nbsp;<span class="inventory">10000</span>份</span>
+                    </span>
+                </div>
+                <div class="dining-area">
+                    <div class="dining-list">
+
+                        <span class="minus hidden" data-id=""><i class="icon iconfont">&#xe6d0;</i></span><span class="goods-num hidden" data-id="">0</span><span class="add" data-id=""><i class="icon iconfont">&#xe6ce;</i></span>
+                                        </div>
+                </div>
+                                <div class="price">
+                    <span class="price-goods"></span><i class="icon iconfont">&#xe604;</i><span class="price-value" data-price=""></span>/份
+                    <span class="ori-price-info">原价<i class="icon iconfont">&#xe604;</i><span class="ori-price"></span></span>
+                </div>
+
             </div>
-    <div class="goods-news">
-        <div class="news-image"><img src="../image/news.png"></div>
-        <marquee direction="up" truespeed="truespeed" scrollamount=2 height="50px" behavior="scroll" style="text-align: center" >
-                        <div class="news">恭喜微凉通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜微凉通过小伙伴的分享获得了0.02元饭票红包</div>
-                        <div class="news">恭喜微凉通过小伙伴的分享获得了0.06元饭票红包</div>
-                        <div class="news">恭喜微凉通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜微凉通过小伙伴的分享获得了0.03元饭票红包</div>
-                        <div class="news">恭喜心软是病、通过小伙伴的分享获得了0.01元饭票红包</div>
-                        <div class="news">恭喜未凝。通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜锦书予你通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜小小通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜王姶。通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜木易亦山通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">恭喜東风通过小伙伴的分享获得了0.04元饭票红包</div>
-                        <div class="news">推广二维码获得饭票1元</div>
-                        <div class="news">恭喜Tomorrow通过小伙伴的分享获得了0.4元饭票红包</div>
-                        <div class="news">推广二维码获得饭票1元</div>
-                        <div class="news">推广二维码获得饭票1元</div>
-                        <div class="news">推广二维码获得饭票1元</div>
-                        <div class="news">恭喜钱东东获得0.01元饭票,</div>
-                        <div class="news">恭喜陈孟辉通过小伙伴的分享获得了0.64元饭票红包</div>
-                        <div class="news">推广二维码获得饭票1元</div>
-                        <div class="news">恭喜金豪获得0.01元饭票红包</div>
-                        <div class="news">恭喜Destiny获得0.08元饭票红包</div>
-                        <div class="news">恭喜阳光获得0.02元饭票红包</div>
-                        <div class="news">推广二维码获得饭票1元</div>
-                        <div class="news">超急邦，一个专送寝室的外卖平台！</div>
-                    </marquee>
-    </div>
-    <div class="goods-wrap" data-sender-time="11:20-13:00，17:20-20:30" data-is-plate-time="1">
-        <div class="wrap-info">
-            <i class="icon iconfont">&#xe761;</i>猜你喜欢
+            <!--多规格时-->
+                        <!--运费信息-->
+            <div class="freight-info">
+                <span class="freight-info-title">运费 : </span><span class="freight-info-desc">免运费</span>
+            </div>
+            <div class="goodsDetail-info-wrap clearfix" id="self">
+                <div class="goodsDetail-nav-wrap">
+                    <div class="goodsDetail-info-nav clearfix">
+                        <a href="#self" class="item buy-area active"  data-num=1>商品详情</a>
+                    </div>
+                </div>
+
+                <!--商品详情-->
+                            </div>
         </div>
-        <div class="goods-area">
-            <!-- 推荐商品 -->
-            <a href="./index.php?c=dining&a=shopInfo&shop_id='+id+'" class="goods-list">
-                <img src="../image/20170523113702284_thumb.jpg" class="goods-img" />
-                <div class="goods-name limit-text">上好佳</div>
-                <div class="goods-address limit-text">口碑：<i class="icon iconfont star">&#xe641;</i><i class="icon iconfont unstar">&#xe642;</i><em style="color:green; padding-left:0px;font-size:16px;">99分</em></div>
-                <div class="goods-address limit-text">江西师大二食堂</div>
-                <div class="goods-info limit-text">送寝室时间：8:00-12:00,14:00-17:00</div>
-                <div class="goods-price">配送费0</div>
-                <span style="color:#e57f23;">该时间段由商家配送至楼下，可预订送寝室</span>
-                <span class="goods-sale">月售100份</span>
-            </a>
-            <div id="get-more"></div>
+        <!--页面脚部-->
+        <div class="bottomNav cf">
+            <a>总计：<i class="icon iconfont">&#xe604;</i><span class="cart-total-price">0</span></a>
+            <a class="payment  " data-price=""><i class="icon iconfont">&#xe6ca;</i>去付款</a>
         </div>
+        <!--购物车-->
+        <div class="cart-wrap">
+    <div class="img">
+        <i class="icon iconfont">&#xe6c4;</i>
     </div>
+    <div class="num">0</div>
 </div>
 
-
-<!--客户的底部导航-->
-<div id="bottom-nav">
-    <a href="./index.html" class="nav-list active">
-        <span class="nav-icon"><i class="icon iconfont">&#xe758;</i></span>
-        <span class="nav-name">首页</span>
-    </a>
-    <a href="./shopList.html" class="nav-list ">
-        <span class="nav-icon"><i class="icon iconfont">&#xe63a;</i></span>
-        <span class="nav-name">商家列表</span>
-    </a>
-    <a href="./orderList.html" class="nav-list ">
-        <span class="nav-icon"><i class="icon iconfont">&#xe675;</i></span>
-        <span class="nav-name">订单列表</span>
-    </a>
-    <a href="./userCenter.html" class="nav-list ">
-        <span class="nav-icon"><i class="icon iconfont">&#xe626;</i></span>
-        <span class="nav-name">个人中心</span>
-    </a>
-</div>
-<!--提示框-->
-<!-- 模态框（Modal） 提示框-->
+<!--首页购物车列表-->
+<div class="cartList-wrap" style="display: none;">
+    <div class="cart-area">
+        <div class="cart-content">
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <td class="col-1"><span class="clear-cart" data-id="0"><i class="icon iconfont">&#xe615;</i>清空购物车</span></td>
+                        <td class="col-2"></td>
+                        <td class="col-3 shut-off"><i class="icon iconfont">&#xe613;</i></td>
+                    </tr>
+                </thead>
+                <tbody class="cart-goods-list">
+                        <tr>
+                            <td class="col-1">辣椒炒肉</td>
+                            <td class="col-2"><i class="icon iconfont">&#xe604;</i>12<span class="unit">/份</span></td>
+                            <td class="col-3">
+                                <div class="goods-count-area">
+                                    <span href="javascript:" class="minus" data-id="'+obj.gid+'"><i class="icon iconfont">&#xe6d0;</i></span>
+                                    <span class="goods-num">1</span>
+                                    <span href="javascript:" class="add" data-id="'+obj.gid+'"><i class="icon iconfont">&#xe6ce;</i></span>
+                                </div>
+                            </td>
+                        </tr>
+                    <!-- <tr class="no-content"><td colspan="3"><i class="icon iconfont">&#xe78c;</i>不好意思！您的购物车空空~~哦！</td></tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>    <!-- 模态框（Modal） 提示框-->
 <div class="modal fade" id="myAlertModal" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -380,7 +361,7 @@
 <div class="modal fade" id="loading" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel">
     <div style="z-index: 9999;height: 100%;margin: 0 auto;text-align: center;line-height: 600px;">
-        <img height="60px" src="../image/loading.gif">
+        <img height="60px" src="./themes/image/loading.gif">
     </div>
 </div><!-- /.modal -->
 
@@ -400,13 +381,17 @@
         <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
         <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
     </div>
-</div><!--公用js文件-->
-<script src="../js/jquery-1.11.0.js"></script>
+</div>    </div>
+    <!--提示框-->
+    <!--公用js文件-->
+    <script src="../js/jquery-1.11.0.js"></script>
 
 <script src="../js/page.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
+<script src="./js/public/swiper/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="./js/public/jquery.bootpag/jquery.bootpag.min.js"></script>
+    <script type="text/javascript" src="../js/goodsDetail.js"></script>
+
 
 </body>
 </html>

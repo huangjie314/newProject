@@ -93,6 +93,7 @@ $(function(){
      * @param int type    0下拉1点击
      */
     function render(type){
+        alert(1)
     	if(type == 1){
     		pageOption.page_num = 0;
     		pageOption.selector.prevAll().remove();
@@ -113,6 +114,7 @@ $(function(){
             data:selectInfo,
             dataType:"json",
             success:function(result,statusText){
+                alert(result.errorCode)
                 if(result.errorCode == 0){
                 	var html = ""
                 	var myList = result.data;
@@ -175,6 +177,7 @@ $(function(){
                         }else if(is_discount == 1){
                         	shopInfoHtml = '<span class="full-cut-price"><i class="icon iconfont item-full-cut">&#xe878;</i>全场'+discount+'折</span>';
                         }
+                        alert('id=>'+id);
                 		html += '<a href="./index.php?c=dining&a=shopInfo&shop_id='+id+'" class="goods-list">'
 								+ '<img src="'+obj.thumb+'" class="goods-img" />'
 								+ '<div class="goods-name limit-text">'+obj.shop_name+'</div>'
