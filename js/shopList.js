@@ -93,7 +93,6 @@ $(function(){
      * @param int type    0下拉1点击
      */
     function render(type){
-        alert(1)
     	if(type == 1){
     		pageOption.page_num = 0;
     		pageOption.selector.prevAll().remove();

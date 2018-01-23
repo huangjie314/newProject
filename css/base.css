@@ -142,7 +142,7 @@ textarea{
     top: 0;
     z-index: 99;
     display: none;
-    
+
 }
 #header .page-title{
     color: #ffffff;
@@ -355,7 +355,7 @@ textarea{
     -moz-animation: rotating 0.5s linear forwards;
     -o-animation: rotating 0.5s linear forwards;
     animation: rotating 0.5s linear forwards;
-    
+
 }
 #content .search-area .cate-icon{
 	display:inline-block;
@@ -398,7 +398,7 @@ textarea{
 #bottom-nav .nav-list{
 	display:block;
 	border-right:1px solid #eee;
-	width:25%;
+	width: calc(100%/3);
 }
 #bottom-nav .nav-list:last-child{
 	border-right:0;

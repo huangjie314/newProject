@@ -81,7 +81,6 @@ function getPageOption(selector,option){
 		    },
 		    complete:function(){
 		    	pageOption.selector_img.hide();
-                alert($('.goods-area').html());
 		    	pageOption.selector.show();
 		    	get_more_top = pageOption.selector.offset().top;
 		    },

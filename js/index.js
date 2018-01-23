@@ -358,7 +358,6 @@ $(function(){
                         var id = obj.id;
                         var img_url = obj.img_url || '';
                         var thumb = obj.thumb;
-                        alert(thumb);
                         var name = obj.shop_name;
                         var address = obj.address;
                         var content = obj.content;
