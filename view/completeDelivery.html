@@ -1,8 +1,7 @@
-<!--首页-->
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>私厨外卖—首页</title>
+    <title>订单管理</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -11,113 +10,149 @@
     <meta name="author" content="XXXX">
     <meta name="robots" content="index,follow">
     <meta name="application-name" content="XXXX">
+
     <link rel="stylesheet"  href="../css/iconfont.css">
     <link rel="stylesheet"  href="../css/common.css">
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/base.css">
 
-    <link rel="stylesheet"  href="../css/swiper.min.css">
-    <link rel="stylesheet"  href="../css/index.css">
+    <link rel="stylesheet"  href="../css/orderList.css">
 </head>
 
 <body>
-<!--主容器-->
-<div id="container" class="container-fluid">
-    <!-- 搜索框 -->
-    <div class="search-area" id="search-area">
-        <input type="search" class="search-input" placeholder="请输入私厨或私房菜">
-        <span class="search-btn"><i class="icon iconfont">&#xe607;</i></span>
-    </div>
-        <!--幻灯片轮播-->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="http://cjb.huimaibuy.com/index.php?c=base_user&a=rechargePay&moduleName=">
-                    <img src="../image/20170718134433734.jpg">
-                </a>
+    <!--主容器-->
+    <div id="container" class="container-fluid">
+        <div class="head-nav">
+            <span class="head-item" data-status="">全部</span>
+            <!-- <span class="head-item " data-status="0">待付款</span> -->
+            <span class="head-item " data-status="3"><!-- 已接单 --> 正在做饭</span>
+            <span class="head-item " data-status="4"><!-- 送餐中 --> 正在配送</span>
+            <span class="head-item active" data-status="5"><!-- 已完成 -->完成配送</span>
+        </div>
+        <div class="content-wrap">
+           <div class="order-list-wrap" data-id="5">
+                <div class="order-list order-item">
+                    <span class="left-name">订单编号</span>
+                    <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                        <span class="order-num">20040606<span class="status-color">交易成功</span></span>
+                    </a>
+                </div>
+                <div class="order-list order-item">
+                    <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                    <span class="left-name">送达时间</span>
+                    <span class="order-text">8:20</span>
+                    <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+                <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，饿死了，快点送过来</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span>
+                    <span class="shop-name limit-text last-item">周黑鸭</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span>
+                    <span class="order-sender active limit-text last-item"><a href="tel:'+shop_phone+'">13533338999</a></span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">鸭脖</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">30.9</span>
+                    </div>
+                    <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
+                    <a href="./index.php?c=dining&a=redPacket&type=0&rid='+rid+'" class="order-share btn">分享红包<a>
+                    <a href="./index.php?c=dining&a=userComplain&type=0&oid='+id+'" class="complain-btn btn">我要投诉<a>
+                    <div class="shop-discount">
+                        <span class="item">折扣优惠&nbsp;</span>
+                        <span class="item-price">- 8</span>
+                    </div>
+                    <div class="dining-last">
+                        <i class="icon iconfont">&#xe604;</i>
+                        <span class="total-price">21.9</span>
+                        <span class="person-count">（1人餐）</span>
+                    </div>
+                    <div class="zan-area">
+                        <div class="zan-title">给骑手点赞</div>
+                            <div class="demo zan-btn-area already-zan">
+                                <i class="icon iconfont zan-item ">&#xe760;</i> 赞
+                            </div>
+                    </div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">此订单已经处理完毕</span>
+                </div>
             </div>
-        </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-    </div>
+            <div class="order-list-wrap" data-id="5">
+                <div class="order-list order-item">
+                    <span class="left-name">订单编号</span>
+                    <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-text">
+                        <span class="order-num">20040606<span class="status-color">交易成功</span></span>
+                    </a>
+                </div>
+                <div class="order-list order-item">
+                    <span class="left-name">订餐时间</span>
+                        <span class="order-text">8:00-12:00,14:00-16:00</span>
+                </div>
+                <div class="order-list time order-item">
+                    <span class="left-name">送达时间</span>
+                    <span class="order-text">8:20</span>
+                    <span class="left-name"><i class="icon iconfont">&#xe6f5;</i>送达计时</span><span data-time="'+obj.estimate_time+'" class="order-time order-estimate-time last-item left-time">00:00:00</span>
+                </div>
+                <div class="order-list order-item">
+                    <span class="left-name">备注信息</span>
+                    <span class="order-text limit-text message">老板，饿死了，快点送过来</span>
+                </div>
+                <div class="order-list shop order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家名称</span>
+                    <span class="shop-name limit-text last-item">必胜客</span>
+                </div>
+                <div class="order-list sender order-last '+sender_class+'">
+                    <span class="left-name"><i class="icon iconfont">&#xe710;</i>商家电话</span>
+                    <span class="order-sender active limit-text last-item"><a href="tel:'+shop_phone+'">13533338999</a></span>
+                </div>
+                <div class="order-list dining order-last">
+                    <span class="left-name"><i class="icon iconfont">&#xe66a;</i>配送餐品</span>
+                    <div class="dining-list">
+                        <span class="dining-name">芝士披萨</span>
+                        <span class="dining-count"><i class="icon iconfont">&#xe614;</i>1</span>
+                        <span class="dining-price">68</span>
+                    </div>
+                    <a href="./index.php?c=dining&a=orderDetail&oid='+id+'" class="order-find btn">订单追踪<a>
 
-    <div class="label-area">
-        <a href="./index.php?c=dining&a=shopList&label_id=32" class="label-list">
-            <img src="../image/20170313085020652.png" class="label-img" />
-            <span class="limit-text label-name">中餐</span>
-        </a>
-        <a href="./index.php?c=dining&a=shopList&label_id=31" class="label-list">
-            <img src="../image/20170313085040919.png" class="label-img" />
-            <span class="limit-text label-name">西餐</span>
-        </a>
-        <a href="./index.php?c=dining&a=shopList&label_id=33" class="label-list">
-            <img src="../image/20170313085107379.png" class="label-img" />
-            <span class="limit-text label-name">火锅</span>
-        </a>
-        <a href="./index.php?c=dining&a=shopList&label_id=34" class="label-list">
-            <img src="../image/20170313085123193.png" class="label-img" />
-            <span class="limit-text label-name">小吃</span>
-        </a>
-        <a href="./index.php?c=dining&a=shopList&label_id=35" class="label-list">
-            <img src="../image/20170313085137159.png" class="label-img" />
-            <span class="limit-text label-name">甜品</span>
-        </a>
-    </div>
-    <div class="goods-news">
-        <div class="news-image"><img src="../image/news.png"></div>
-        <marquee direction="up" truespeed="truespeed" scrollamount=2 height="50px" behavior="scroll" style="text-align: center" >
-            <div class="news">恭喜微凉通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜微凉通过小伙伴的分享获得了0.02元饭票红包</div>
-            <div class="news">恭喜微凉通过小伙伴的分享获得了0.06元饭票红包</div>
-            <div class="news">恭喜微凉通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜微凉通过小伙伴的分享获得了0.03元饭票红包</div>
-            <div class="news">恭喜心软是病、通过小伙伴的分享获得了0.01元饭票红包</div>
-            <div class="news">恭喜未凝。通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜锦书予你通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜小小通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜王姶。通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜木易亦山通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">恭喜東风通过小伙伴的分享获得了0.04元饭票红包</div>
-            <div class="news">推广二维码获得饭票1元</div>
-            <div class="news">恭喜Tomorrow通过小伙伴的分享获得了0.4元饭票红包</div>
-            <div class="news">推广二维码获得饭票1元</div>
-            <div class="news">推广二维码获得饭票1元</div>
-            <div class="news">推广二维码获得饭票1元</div>
-            <div class="news">恭喜钱东东获得0.01元饭票,</div>
-            <div class="news">恭喜陈孟辉通过小伙伴的分享获得了0.64元饭票红包</div>
-            <div class="news">推广二维码获得饭票1元</div>
-            <div class="news">恭喜金豪获得0.01元饭票红包</div>
-            <div class="news">恭喜Destiny获得0.08元饭票红包</div>
-            <div class="news">恭喜阳光获得0.02元饭票红包</div>
-            <div class="news">推广二维码获得饭票1元</div>
-            <div class="news">超急邦，一个专送寝室的外卖平台！</div>
-        </marquee>
-    </div>
-    <div class="goods-wrap" data-sender-time="11:20-13:00，17:20-20:30" data-is-plate-time="1">
-        <div class="wrap-info">
-            <i class="icon iconfont">&#xe761;</i>猜你喜欢
-        </div>
-        <div class="goods-area">
-            <!-- 推荐商品 -->
-            <a href="./index.php?c=dining&a=shopInfo&shop_id='+id+'" class="goods-list">
-                <img src="../image/20170523113702284_thumb.jpg" class="goods-img" />
-                <div class="goods-name limit-text">上好佳</div>
-                <div class="goods-address limit-text">口碑：<i class="icon iconfont star">&#xe641;</i><i class="icon iconfont unstar">&#xe642;</i><em style="color:green; padding-left:0px;font-size:16px;">99分</em></div>
-                <div class="goods-address limit-text">江西师大二食堂</div>
-                <div class="goods-info limit-text">送寝室时间：8:00-12:00,14:00-17:00</div>
-                <div class="goods-price">配送费0</div>
-                <span style="color:#e57f23;">该时间段由商家配送至楼下，可预订送寝室</span>
-                <span class="goods-sale">月售100份</span>
-            </a>
+                    <a href="javascript:;" class="order-share-over btn">分享红包<a>
+
+                    <a href="javascript:;" class="complain-cancel-btn btn">取消投诉<a>
+
+                    <div class="shop-discount">
+                        <span class="item">满减优惠&nbsp;</span>
+                            <span class="item-price">- 10</span></div>
+                    <div class="dining-last">
+                        <i class="icon iconfont">&#xe604;</i>
+                        <span class="total-price">78</span>
+                        <span class="person-count">（2人餐）</span>
+                    </div>
+                    <div class="zan-area">
+                        <div class="zan-title">给骑手点赞</div>
+                        <div class="demo zan-btn-area no-zan"><i class="icon iconfont zan-item ">&#xe760;</i> 赞</div>
+                    </div>
+                </div>
+                <div class="order-status">
+                    <i class="icon iconfont">&#xe7c7;</i><span class="status-info">此订单已经处理完毕</span>
+                </div>
+            </div>
+
             <div id="get-more"></div>
         </div>
     </div>
-</div>
-
-
-<!--客户的底部导航-->
+    <!--客户的底部导航-->
 <div id="bottom-nav">
-    <a href="./index.html" class="nav-list active">
+    <a href="./index.html" class="nav-list ">
         <span class="nav-icon"><i class="icon iconfont">&#xe758;</i></span>
         <span class="nav-name">首页</span>
     </a>
@@ -130,9 +165,8 @@
         <span class="nav-name">我的</span>
     </a>
 </div>
-<!--提示框-->
-
-<!-- 模态框（Modal） 提示框-->
+    <!--提示框-->
+    <!-- 模态框（Modal） 提示框-->
 <div class="modal fade" id="myAlertModal" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -153,9 +187,9 @@
                 <button type="button" class="btn btn-default close-action" data-dismiss="modal">关闭</button>
 
             </div>
-        </div>
+        </div><!-- /.modal-content -->
     </div>
-</div>
+</div><!-- /.modal -->
 <!--弹框的遮罩层-->
 <div id="maskDialog"></div>
 <!--其他遮罩层 如加载框-->
@@ -387,29 +421,11 @@
         <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
         <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
     </div>
-</div><!--公用js文件-->
+</div>    <!--公用js文件-->
 <script src="../js/jquery-1.11.0.js"></script>
 
 <script src="../js/page.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
-
-<script type="text/javascript">
-    $(window).scroll(function(){
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop === 0){
-            $('#search-area').animate(function(){
-                alert(this);
-                $(this).css({'position':'static','background':'#009946'});
-            });
-        } else {
-             $('#search-area').animate(function(){
-                 alert(this);
-                $(this).css({'position':'fixed','background':'transparent'});
-             });
-        }
-    })
-</script>
+<script type="text/javascript" src="../js/orderList.js"></script>
 </body>
 </html>

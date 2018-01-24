@@ -3,12 +3,12 @@
 .search-area{
     width:100%;
     max-width:640px;
-    position:fixed;
+    position:static;
     height:46px;
     top:0px;
     padding:5px 10px;
    /* border-bottom:1px solid #eee;*/
-   /* background:rgba(255,255,255,0.7);*/
+   background:#009946;
     z-index:998;
 }
 .search-input{
