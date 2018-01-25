@@ -1,8 +1,7 @@
-<!-- 我的 -->
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>我的</title>
+    <title>充值页面</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -14,152 +13,56 @@
 
     <link rel="stylesheet"  href="../css/iconfont.css">
     <link rel="stylesheet"  href="../css/common.css">
-    <link rel="stylesheet"  href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/base.css">
 
-    <link rel="stylesheet"  href="../css/userCenter.css">
+    <link rel="stylesheet"  href="../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../css/userBase.css">
+    <link rel="stylesheet"  href="../css/rechargePay.css">
 </head>
 
 <body>
     <!--主容器-->
-    <div id="container" >
-
-        <!--主体内容-->
+    <div id="container" class="container-fluid">
         <div id="content">
-            <div class="top-area clearfix">
-                <div class="head-image"><img src="http://wx.qlogo.cn/mmopen/u2hicLTTQDgb1xvekwpDvGz8l4Z3lemetEl0aJ1J3R0sd9kR699aNPZ7fg78Hj8hl6E8ficxZ4SWbc1tDoRSXOjWnIMSrK2Qow/132"></div>
-                <div class="myinfo" style="height:40px;">
-                    <div>哎呦喂</div>
-                    <a class="my-account">余额：<span class="account-num">10.00元</span>
-                        <a class="account-recharge" href="./pay.html">充值优惠</a>
-                    </a>
-                    <a class="account-recharge" style="display: none;" href="./index.php?c=dining&a=withdrawMoney">立即提现</a>
-                    </a>
-
-                </div>
+            <div class="header">
+                <a class="header-left" href="javascript:window.history.go(-1);">
+                    <i class="icon iconfont">&#xe62a;</i>
+                </a>
+                充值
             </div>
-            <!--订单功能区-->
-            <div class="order-area">
-                <div class="cf all-order clearfix" style="display: none;">
-                    <a href="javascript:;" class="left">
-                        <i class="icon iconfont">&#xe644;</i><span>美食订单</span>
-                    </a>
-                    <a href="./index.php?c=dining&a=orderList" class="right">
-                        <span>查看全部订单</span><i class="icon iconfont">&#xe654;</i>
-                    </a>
-                </div>
-               <div class="quick-btn cf">
-                    <a class="order-btn order-btn-1" href="./index.php?c=dining&a=orderList&state=0">
-                        <p class="num"><i class="icon iconfont">&#xe68e;</i></p>
-                        <p class="btn-text">待付款</p>
-                        <span class="goods-num"><span>0</span></span>
-                    </a>
-                    <a class="order-btn order-btn-2" href="./index.php?c=dining&a=orderList&state=3">
-                        <p class="num"><i class="icon iconfont">&#xe7c9;</i></p>
-                        <p class="btn-text">已接单</p>
-                        <span class="goods-num"><span>0</span></span>
-                    </a>
-                    <a class="order-btn order-btn-3" href="./index.php?c=dining&a=orderList&state=4">
-                        <p class="num"><i class="icon iconfont">&#xe7cc;</i></p>
-                        <p class="btn-text">送餐中</p>
-                        <span class="goods-num"><span>0</span></span>
-                    </a>
-                    <a class="order-btn order-btn-4" href="./index.php?c=dining&a=orderList&state=5">
-                        <p class="num"><i class="icon iconfont">&#xe694;</i></p>
-                        <p class="btn-text">已完成</p>
-                        <span class="goods-num"><span>0</span></span>
-                    </a>
+            <div class="img-area">
+                <img class="recharge-img" src="../image/recharge_top.jpg">
+            </div>
+            <div class="recharge-box">
+                <div class="recharge-title">请选择固定金额或自定义金额微信支付</div>
+                <div class="fixed-area">
+                    <div class="fixed-item">
+                        <div class="item fixed" data-money="20" data-type="0" is-send="0" data-send="1"><span class="item-color">20</span>元</div>
                     </div>
-            </div>
-
-
-             <!-- 我的订单 -->
-            <div class="user-area user-area-2">
-                <div class="user-info">
-                     <a href="./orderList.html">
-                        <i class="icon iconfont">&#xe675;</i>订单管理<i class="icon iconfont arrow">&#xe654;</i>
-                    </a>
+                    <div class="fixed-item">
+                        <div class="item fixed" data-money="50" data-type="0" is-send="0" data-send="2"><span class="item-color">50</span>元</div>
+                    </div>
+                    <div class="fixed-item">
+                        <div class="item fixed active" data-money="100" data-type="0" is-send="0" data-send="3"><span class="item-color">100</span>元</div>
+                    </div>
+                    <div class="fixed-item">
+                        <div class="item fixed" data-money="200" data-type="0" is-send="0" data-send="4"><span class="item-color">200</span>元</div>
+                    </div>
                 </div>
-            </div>
-
-
-            <!--优惠券是否启用-->
-
-            <!--会员卡是否启用-->
-
-
-
-            <!--地址管理-->
-            <div class="user-area user-area-2">
-                <div class="user-info">
-                    <a href="./addressList.html">
-                        <i class="icon iconfont">&#xe61a;</i>地址管理<i class="icon iconfont arrow">&#xe654;</i>
-                    </a>
+                <div class="defined-area item" data-type="1"  is-send="1" data-min="10" data-send="40">
+                    <input class="defined" type="tel" placeholder="自定义金额">
+                    <span class="unit">元</span>
                 </div>
-            </div>
-            <!--积分提现-->
 
-            <div class="user-area user-area-2">
-                <div class="user-info">
-                     <a href="./orderList.html">
-                        <i class="icon iconfont icon-jifen"></i>我的积分<i class="icon iconfont arrow">&#xe654;</i>
-                    </a>
-                </div>
-            </div>
-            <!--推广页面-->
-            <div class="user-area user-area-2">
-                <div class="user-info">
-                    <a href="./promotionPage.html">
-                        <i class="icon iconfont">&#xe6f7;</i>我要分享，吃霸王餐咯<i class="icon iconfont arrow">&#xe654;</i>
-                    </a>
-                </div>
-            </div>
-            <!--外卖员入口-->
-            <div class="user-area user-area-2" style="display: none;">
-                <div class="user-info">
-                    <a href="./index.php?c=sender&a=login">
-                        <i class="icon iconfont">&#xe6f7;</i>我要送餐<i class="icon iconfont arrow">&#xe654;</i>
-                    </a>
-                </div>
-            </div>
-
-
-            <!--客服电话-->
-            <div class="user-area user-area-1">
-                <div class="user-info">
-                    <a href="tel:13063216193">
-                        <i class="icon iconfont">&#xe65d;</i>客服电话  13063216193
-                    </a>
-                </div>
-            </div>
-                        <!--外卖员投诉电话-->
-            <div class="user-area user-area-0" style="display: none;">
-                <div class="user-info">
-                    <a href="tel:15650670862">
-                        <i class="icon iconfont">&#xe67f;</i>外卖员投诉电话   15650670862
-                    </a>
-                </div>
+                <div class="info">
+                 </div>
+                <div class="recharge-btn" data-name="">立即充值</div>
             </div>
 
         </div>
-
-
+        <!--页面脚部-->
+        <div id="footer">技术支持：<a href="">卓越科技</a></div>
     </div>
-    <!--客户的底部导航-->
-<div id="bottom-nav">
-    <a href="./index.html" class="nav-list ">
-        <span class="nav-icon"><i class="icon iconfont">&#xe758;</i></span>
-        <span class="nav-name">首页</span>
-    </a>
-    <a href="./shopList.html" class="nav-list ">
-        <span class="nav-icon"><i class="icon iconfont">&#xe63a;</i></span>
-        <span class="nav-name">私厨</span>
-    </a>
-    <a href="./userCenter.html" class="nav-list active">
-        <span class="nav-icon"><i class="icon iconfont">&#xe626;</i></span>
-        <span class="nav-name">我的</span>
-    </a>
-</div>
+
     <!--提示框-->
     <!--弹框的遮罩层-->
 <div id="maskDialog"></div>
@@ -168,14 +71,14 @@
 <!-- 加载中操作转圈提示 -->
 <div id="loadingDialog" class="my-dialog">
     <div class="my-dialog-body">
-        <img src="../image/loading.gif">
+        <img src="./themes/image/loading.gif">
     </div>
 </div>
 
 <!--页面即将跳转提示框-->
 <div id="skipDialog" class="my-dialog">
     <div class="my-dialog-body">
-        <img src="../image/x-loading.gif">
+        <img src="./themes/image/x-loading.gif">
         <div class="desc-text">页面即将跳转，请稍等...</div>
     </div>
 </div>
@@ -370,8 +273,7 @@
 </div><!-- /.modal -->    <!--公用js文件-->
     <script src="../js/jquery-1.11.0.js"></script>
     <script src="../js/common.js"></script>
-  <!--   <script type="text/javascript" src="./template/front/common/common.js"></script> -->
-    <script type="text/javascript" src="../js/userCenter.js"></script>
-
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/rechargePay.js"></script>
 </body>
 </html>

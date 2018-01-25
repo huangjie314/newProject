@@ -28,6 +28,7 @@
         <input type="search" class="search-input" placeholder="请输入私厨或私房菜">
         <span class="search-btn"><i class="icon iconfont">&#xe607;</i></span>
     </div>
+    <div class="clearbox"></div>
         <!--幻灯片轮播-->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -399,15 +400,9 @@
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         if(scrollTop === 0){
-            $('#search-area').animate(function(){
-                alert(this);
-                $(this).css({'position':'static','background':'#009946'});
-            });
+            $('#search-area').css({background:'#009946'});
         } else {
-             $('#search-area').animate(function(){
-                 alert(this);
-                $(this).css({'position':'fixed','background':'transparent'});
-             });
+            $('#search-area').css({background:'transparent'});
         }
     })
 </script>

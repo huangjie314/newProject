@@ -3,7 +3,7 @@
 .search-area{
     width:100%;
     max-width:640px;
-    position:static;
+    position:fixed;
     height:46px;
     top:0px;
     padding:5px 10px;
@@ -35,6 +35,10 @@
 }
 .search-btn .icon{
     font-size:19px;
+}
+.clearbox {
+    clear: both;
+    height: 46px;
 }
 /**幻灯片**/
 .swiper-container .swiper-slide img{

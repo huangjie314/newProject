@@ -1,0 +1,104 @@
+/**************************
+ ---------首页样式---------
+ --------author:linli-------
+ ------date:2016-07-06-----
+ *************************/
+/**头部***/
+#container .header{
+	text-align:center;
+	background-color:#000;
+	color:#fff;
+	font-size:16px;
+	height:40px;
+	line-height:40px;
+	position:relative;
+}
+#container .header .header-left{
+	display:inline-block;
+	height:40px;
+	position:absolute;
+	left:0px;
+	width:50px;
+	color:#fff;
+}
+#container .header .header-left .icon{
+	font-size:20px;
+}
+/**充值内容***/
+#container .recharge-box{
+	padding:20px 10px;
+}
+#container .recharge-box .fixed-area{
+	display: -webkit-box;
+}
+#container .recharge-box .fixed-area:after{
+	content: '';
+	height: 0;
+	display: block;
+	clear: both;
+}
+#container .recharge-box .fixed-area .fixed-item{
+	box-flex:1;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	float: none;
+	padding:10px;
+}
+#container .recharge-box .fixed-area .fixed-item .item{
+	text-align:center;
+	line-height:34px;
+	background-color:#fff;
+	cursor:pointer;
+	border-radius:3px;
+}
+#container .recharge-box .fixed-area .fixed-item .item .item-color{
+	color:#ef9d02;
+}
+#container .recharge-box .defined-area{
+	margin-top:20px;
+	padding:0 50px 0 5px;
+	height:36px;
+	line-height:36px;
+	position:relative;
+	background-color:#fff;
+	border-radius:3px;
+}
+#container .recharge-box .defined-area .defined{
+	height:34px;
+	border:none;
+	outline: none;
+	position:absolute;
+	top:0;
+	width:60%;
+}
+#container .recharge-box .defined-area .unit{
+	position:absolute;
+	right:30px;
+	color:#aaa;
+}
+#container .recharge-box .item{
+	border:1px solid #ddd;
+}
+#container .recharge-box .item.active{
+	border:1px solid #a90505;
+}
+#container .recharge-box .info{
+	color:#aaa;
+	line-height:40px;
+	font-size:12px;
+}
+#container .recharge-btn{
+	display:inline-block;
+	width:100%;
+	border-radius:4px;
+	text-align:center;
+	line-height:36px;
+	height:36px;
+	color:#fff;
+	cursor:pointer;
+	margin:25px 0px;
+	background-color:#a90505;
+}
+#content .recharge-img{
+	width:100%;
+}
