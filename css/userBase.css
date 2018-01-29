@@ -10,7 +10,7 @@ body{
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     min-height: 300px;
     overflow: visible;
 }
@@ -139,7 +139,7 @@ a,a:hover{
 .bottomNav a i{
 	font-size: 22px;
 	color: #fff;
-	margin-right: 5px;	
+	margin-right: 5px;
 }
 .bottomNav a.buy{
 	background: #06683f;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>我的积分</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="XXXX">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="XXXX">
+
+    <link rel="stylesheet"  href="../css/iconfont.css">
+    <link rel="stylesheet"  href="../css/common.css">
+    <link rel="stylesheet"  href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/userBase.css">
+    <link rel="stylesheet"  href="../css/exchange.css">
+</head>
+
+<body>
+    <!--主容器-->
+    <div id="container" class="container-fluid">
+        <div id="content">
+            <div class="header">
+                <a class="header-left" href="javascript:window.history.go(-1);">
+                    <i class="icon iconfont">&#xe62a;</i>
+                </a>
+                我的积分
+            </div>
+            <div class="jifen-box">
+                <div class="points text-center">
+                    <i class="icon iconfont icon-jifen"></i>
+                    <span class="num">10</span>
+                </div>
+                <div class="exchange-btn" data-name="">立即兑换</div>
+                <div class="hint">
+                    <h6>温馨提示：</h6>
+                    <p class="text-muted"><span class="badge">1</span>&nbsp;积分可以通过分享和每次订单得到，分享时每人都有专属的分享码，被分享的人在付款时可以使用分享码抵扣部分价款，被分享的人订单成功后分享人获得积分。</p>
+                    <p class="text-muted"><span class="badge">2</span>&nbsp;每次个人订单成功后系统也会给予一定百分比的积分。</p>
+                    <p class="text-muted"><span class="badge">3</span>&nbsp;简单起见，1个积分就是人民币1元。</p>
+                </div>
+            </div>
+        </div>
+        <!--页面脚部-->
+
+        <div id="footer">技术支持：<a href="">卓越科技</a></div>
+    </div>
+<script src="../js/jquery-1.11.0.js"></script>
+<script>
+    $('.exchange-btn').click(function(){
+        window.open('./exchange.html');
+    });
+
+</script>

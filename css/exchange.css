@@ -1,0 +1,51 @@
+ /**头部***/
+#container .header{
+    text-align:center;
+    background-color:#ffffff;
+    color:#505050;
+    font-size:16px;
+    height:40px;
+    line-height:40px;
+    position:relative;
+}
+#container .header .header-left{
+    display:inline-block;
+    height:40px;
+    position:absolute;
+    left:0px;
+    width:50px;
+    color:#494949;
+}
+#container .header .header-left .icon{
+    font-size:20px;
+}
+.jifen-box{padding: 20px 10px;}
+.points{margin: 7em 0;}
+.points i{font-size: 1.8em; color: #050505;}
+.points .num{font-size: 3em; color: #050505;}
+.exchange-btn{
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 36px;
+    height: 36px;
+    color: #fff;
+    cursor: pointer;
+    margin: 25px 0px;
+    background-color: #ff2d4a;
+}
+.badge{
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 5px;
+    font-size: 5px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #ff2d4a;
+    border-radius: 100%;
+}

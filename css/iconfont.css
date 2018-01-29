@@ -14,7 +14,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-jifenhh:before { content: "\e65e"; }
 .icon-jiu:before { content: "\e660"; }
 
 .icon-yinliao:before { content: "\e66b"; }

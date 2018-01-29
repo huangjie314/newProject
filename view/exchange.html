@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>积分兑换</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="XXXX">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="XXXX">
+
+    <link rel="stylesheet"  href="../css/iconfont.css">
+    <link rel="stylesheet"  href="../css/common.css">
+    <link rel="stylesheet"  href="../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../css/userBase.css">
+    <link rel="stylesheet"  href="../css/rechargePay.css">
+</head>
+
+<body>
+    <!--主容器-->
+    <div id="container" class="container-fluid">
+        <div id="content">
+            <div class="header">
+                <a class="header-left" href="javascript:window.history.go(-1);">
+                    <i class="icon iconfont">&#xe62a;</i>
+                </a>
+                积分兑换
+            </div>
+            <div class="recharge-box">
+                <div class="fixed-area">
+                    <div class="fixed-item">
+                        <div class="item fixed" data-money="20" data-type="0" is-send="0" data-send="1"><span class="item-color">20</span>元</div>
+                    </div>
+                    <div class="fixed-item">
+                        <div class="item fixed" data-money="50" data-type="0" is-send="0" data-send="2"><span class="item-color">50</span>元</div>
+                    </div>
+                    <div class="fixed-item">
+                        <div class="item fixed active" data-money="100" data-type="0" is-send="0" data-send="3"><span class="item-color">100</span>元</div>
+                    </div>
+                    <div class="fixed-item">
+                        <div class="item fixed" data-money="200" data-type="0" is-send="0" data-send="4"><span class="item-color">200</span>元</div>
+                    </div>
+                </div>
+                <div class="defined-area item" data-type="1"  is-send="1" data-min="10" data-send="40">
+                    <input class="defined" type="tel" placeholder="自定义金额">
+                    <span class="unit">元</span>
+                </div>
+
+                <div class="info">
+                 需要100积分
+                 </div>
+                <div class="recharge-btn" data-name="">立即兑换</div>
+                <div class="my-points text-right">
+                     <i class="icon iconfont icon-jifen"></i>我的积分：<span>10</span>
+                </div>
+            </div>
+
+        </div>
+        <!--页面脚部-->
+        <div id="footer">技术支持：<a href="">卓越科技</a></div>
+    </div>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#container .recharge-box .item").click(function(){
+            var _this = $(this);
+            var is_send = _this.attr("is-send");
+            var send_coin = _this.attr("data-send");
+            var money = _this.attr("data-money");
+            var money_min = _this.attr("data-min");
+            //input 框获得焦点
+            if(_this.hasClass("defined-area")){
+                _this.find(".defined").focus();
+                if(is_send == 1){
+                    $("#container .recharge-box .info").text('注：自定义金额满'+money_min+'元，充值赠送'+send_coin+'元');
+                }
+            }
+            if(_this.hasClass("active")){
+                return false;
+            }
+            //标志选中
+            $("#container .recharge-box .item.active").removeClass("active");
+            _this.addClass("active");
+            if(is_send == 1 && _this.hasClass("fixed")){
+                $("#container .recharge-box .info").text('注：固定金额'+money+'元，充值赠送'+send_coin+'元');
+            }
+        })
+    </script>
+</body>
+</html>

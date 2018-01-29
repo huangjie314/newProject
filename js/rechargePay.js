@@ -24,7 +24,7 @@ $(function(){
     			if(is_send == 1){
     				$("#container .recharge-box .info").text('注：自定义金额满'+money_min+'元，充值赠送'+send_coin+'元');
     			}
-			}    		
+			}
     		if(_this.hasClass("active")){
     			return false;
     		}
@@ -35,7 +35,7 @@ $(function(){
 				$("#container .recharge-box .info").text('注：固定金额'+money+'元，充值赠送'+send_coin+'元');
 			}
     	})
-    	
+
         //提交订单
         $("#container .recharge-box .recharge-btn").click(function(){
         	if($("#container .recharge-box .item.active").hasClass("defined-area")){
