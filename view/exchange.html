@@ -31,25 +31,24 @@
             <div class="recharge-box">
                 <div class="fixed-area">
                     <div class="fixed-item">
-                        <div class="item fixed" data-money="20" data-type="0" is-send="0" data-send="1"><span class="item-color">20</span>元</div>
+                        <div class="item fixed" data-money="20"><span class="item-color">20</span>元</div>
                     </div>
                     <div class="fixed-item">
-                        <div class="item fixed" data-money="50" data-type="0" is-send="0" data-send="2"><span class="item-color">50</span>元</div>
+                        <div class="item fixed" data-money="50"><span class="item-color">50</span>元</div>
                     </div>
                     <div class="fixed-item">
-                        <div class="item fixed active" data-money="100" data-type="0" is-send="0" data-send="3"><span class="item-color">100</span>元</div>
+                        <div class="item fixed active" data-money="100"><span class="item-color">100</span>元</div>
                     </div>
                     <div class="fixed-item">
-                        <div class="item fixed" data-money="200" data-type="0" is-send="0" data-send="4"><span class="item-color">200</span>元</div>
+                        <div class="item fixed" data-money="200"><span class="item-color">200</span>元</div>
                     </div>
                 </div>
-                <div class="defined-area item" data-type="1"  is-send="1" data-min="10" data-send="40">
-                    <input class="defined" type="tel" placeholder="自定义金额">
+                <div class="defined-area item">
+                    <input class="defined" type="text" placeholder="自定义金额">
                     <span class="unit">元</span>
                 </div>
-
                 <div class="info">
-                 需要100积分
+                    需要<span id="need-coin">100</span>积分
                  </div>
                 <div class="recharge-btn" data-name="">立即兑换</div>
                 <div class="my-points text-right">
@@ -67,27 +66,26 @@
     <script type="text/javascript">
         $("#container .recharge-box .item").click(function(){
             var _this = $(this);
-            var is_send = _this.attr("is-send");
-            var send_coin = _this.attr("data-send");
             var money = _this.attr("data-money");
-            var money_min = _this.attr("data-min");
             //input 框获得焦点
             if(_this.hasClass("defined-area")){
                 _this.find(".defined").focus();
-                if(is_send == 1){
-                    $("#container .recharge-box .info").text('注：自定义金额满'+money_min+'元，充值赠送'+send_coin+'元');
-                }
+            } else {
+                $('.defined-area input').val('');
             }
+
             if(_this.hasClass("active")){
                 return false;
             }
             //标志选中
             $("#container .recharge-box .item.active").removeClass("active");
             _this.addClass("active");
-            if(is_send == 1 && _this.hasClass("fixed")){
-                $("#container .recharge-box .info").text('注：固定金额'+money+'元，充值赠送'+send_coin+'元');
-            }
+            $('.info #need-coin').text(money);
         })
+        $('.defined-area input').on('change input', function(){
+            var inputMoney = this.value;
+            $('.info #need-coin').text(inputMoney);
+        });
     </script>
 </body>
 </html>
