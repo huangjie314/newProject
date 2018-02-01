@@ -68,8 +68,28 @@
 .wrap-info{
 	padding:10px 0;
 	text-align:center;
-	color:#fd3245;
+	color:#000;
 	border-bottom:1px solid #eee;
+    position: relative;
+}
+.wrap-info:after, .wrap-info:before {
+    display: block;
+    content: "";
+    width: .533333rem;
+    width: 5.333333vw;
+    height: .026667rem;
+    height: .266667vw;
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+}
+.wrap-info:before {
+    left: 50%;
+    margin-left: -53px;
+}
+.wrap-info:after {
+     right: 50%;
+    margin-right: -53px;
 }
 .wrap-info .icon{
 	position:relative;
@@ -91,7 +111,7 @@
 .goods-img{
     width: 100px;
     position: absolute;
-    margin: 10px 0;
+    margin: 10px 0 ;
     top: 0;
     bottom: 0;
     left: 10px;
