@@ -1,9 +1,3 @@
-/**
- * 练习详情界面js
- * @author lynn
- * @since 2016-07-26
- */
-
 $(function(){
 	var param = window.location.search;
 	var shop_id = param.split('shop_id=')[1];

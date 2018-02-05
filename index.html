@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <fieldset>
+        <legend>2018年1月份到账工资</legend>
+        <div>
+            <label>底薪:</label>
+            <input type="text" id="salary" value="" />
+        </div>
+        <div>
+            <label>当月出勤天数:</label>
+            <input type="text" id="days" value="23" />
+        </div>
+        <div>
+            <label>总缺勤分钟数:</label>
+            <input type="text" name="" id="abcenseNum" value="">
+        </div>
+        <div>
+            <label>社保扣款：</label>
+            <input type="text" name="" id="shebao" value="257.56">
+        </div>
+        <div>
+            <label>公积金扣钱：</label>
+            <input type="text" name="" id="funds" value="76">
+        </div>
+        <div>
+            <label>公转款：</label>
+            <input type="text" name="" id="Revolution" value="861">
+        </div>
+        <div>
+
+            <label>
+                每月到账工资：
+            </label>
+            <input type="text" name="" id="gongzi">
+        </div>
+
+        <div>
+            <button type="button" id="jiesuan">结算</button>
+        </div>
+    </fieldset>
+
+</body>
+<script type="text/javascript">
+    document.getElementById('jiesuan').onclick = function(){
+        var salary = document.getElementById('salary').value || 0;
+        var abcenseNum = document.getElementById('abcenseNum').value || 0;//缺勤分钟总数
+        var days = document.getElementById('days').value || 0;
+
+        var Revolution = parseInt(document.getElementById('Revolution').value || 0) ;
+        var funds = document.getElementById('funds').value || 0;
+        var shebao = document.getElementById('shebao').value || 0;
+
+        var abcenseKoukuan = (salary/days/8/60) * abcenseNum;
+        //底薪 - 缺勤扣钱 - 公积金 - 社保 + 公转款
+        var jiesuan = salary - abcenseKoukuan - funds - shebao + Revolution;
+        document.getElementById('gongzi').value = jiesuan;
+    }
+
+
+
+</script>
+</html>

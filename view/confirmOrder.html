@@ -1,0 +1,366 @@
+<!--提交订单-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>确认订单</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="XXXX">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="XXXX">
+
+    <link rel="stylesheet"  href="../css/iconfont.css">
+    <link rel="stylesheet"  href="../css/common.css">
+    <link rel="stylesheet"  href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <link rel="stylesheet"  href="../css/confirmOrder.css">
+</head>
+
+<body>
+<!--主容器-->
+<div id="container">
+
+    <!--主体内容-->
+    <div id="content">
+        <div class="order-address-area">
+            <div class="address-top-area">
+                <span>选择收货地址</span><a href="./index.php?c=base_user&a=addressList"><i class="icon iconfont">&#xe61a;</i>地址管理</a>
+                <a href="javascript:window.location.reload();">刷新</a>
+            </div>
+            <div class="address-list">
+                                                <div class="address-area clearfix" data-id="4273">
+                    <div class="hidden address-type"  data-type='0'></div>
+                    <!--选择区域-->
+                    <div class="select-area">
+                        <a class="item-select selected" data-build-id="15" data-sex="1" >
+                            <i class="icon iconfont selected"style="display:inline;">&#xe621;</i>
+                            <i class="icon iconfont un-selected">&#xe622;</i>
+                        </a>
+                    </div>
+                    <!--收货信息-->
+                    <div class="receiver-info">
+                        <div class="callname-phone-info">
+                            <span class="callname">黄先生</span>
+                            <span class="phone">13263919118</span>
+                        </div>
+                        <!--地址信息-->
+                        <div class="address-info">1(男宿舍)N443</div>
+                    </div>
+
+                </div>
+
+                                <div class="address-area clearfix" data-id="4274">
+                    <div class="hidden address-type"  data-type='0'></div>
+                    <!--选择区域-->
+                    <div class="select-area">
+                        <a class="item-select " data-build-id="16" data-sex="1" >
+                            <i class="icon iconfont selected">&#xe621;</i>
+                            <i class="icon iconfont un-selected"style="display:inline;">&#xe622;</i>
+                        </a>
+                    </div>
+                    <!--收货信息-->
+                    <div class="receiver-info">
+                        <div class="callname-phone-info">
+                            <span class="callname">黄小强</span>
+                            <span class="phone">13263919118</span>
+                        </div>
+                        <!--地址信息-->
+                        <div class="address-info">2(男宿舍)s258</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="address-top-area">
+            <span>订餐信息</span>
+        </div>
+        <!--待付款订单的商品列表-->
+        <div class="order-goods-list" data-is-plate-time="1">
+            <div class="shop-info limit-text"><i class="icon iconfont">&#xe710;</i><span class="shop-address">（）</span></div>
+                                    <div class="dining-send">
+                <div class="dining-title">餐盒费</div>
+                <div class="dining-price"><i class="icon iconfont">&#xe604;</i>0.9</div>
+            </div>
+                        <!--商家打折、减免-->
+            <div class="shop-discount-full-cut">
+                            </div>
+                                            <div class="balance-money row">
+                    <div class ="row list list-1">
+                        <p class = 'p1' data-balance="0.9">
+                            <span class="left">您拥有饭票<span class='total-balance'>10.00</span>元，可使用<span id="balance-money" data-balance="0.9" style="color: #FF7527;" >0.9</span>元支付</span>
+                            <span class="right" fir-balance="0.9" balance-value="10.00"><i class="icon iconfont">&#xe616;</i></span>
+                        </p>
+                    </div>
+                    <div class ="reduce row">
+                    </div>
+                </div>
+                                        <div class="money">
+                <div class="total-money">总计：<span class="total-pay"><i class="icon iconfont">&#xe604;</i>0.9</span></div>
+                <div class="true-money" data-total-price="0.9">实付款：<i class="icon iconfont">&#xe604;</i><span class="true-pay">0.9</span></div>
+            </div>
+        </div>
+
+        <div class="sending-model-area">
+                    </div>
+
+
+        <div class="dining-info-area">
+            <div class="dining-info-list">
+                <div class="dining-people dining-item">用餐人数</div>
+                <input placeholder="便于商家为您准备餐具" type="tel" class="input-item people-num" />
+            </div>
+            <div class="dining-info-list">
+                <div class="dining-content dining-item">留言备注</div>
+                <input placeholder="口味、偏好等需求备注" type="text" class="input-item content" />
+            </div>
+            <div class="send-time"></div>
+        </div>
+        <div class="order-bottom-area" data-current-time="2018-02-05 17:40:58"   data-shop="" data-sender-time="11:20-13:00，17:20-20:30">
+            <div class="pay-method-area row">
+                <div class="pay-total">合计：<span><i class="icon iconfont">&#xe604;</i></span><span class="real-price" id = "final-total-price" >0.9</span></div>
+                <div class="pay-method"><a class="submitOrder able active"><i class="icon iconfont">&#xe698;</i>提交订单</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="confirm-order-dialog">
+    <div class="confirm-order-panel">
+        <div class="confirm-order-top">
+            <i class="icon iconfont close-dialog">&#xe613;</i>
+        </div>
+        <div class="confirm-content">
+            <div class="tip-icon"><i class="icon iconfont tip-iconfont">&#xe616;</i></div>
+            <div class="confirm-tip">下单成功</div>
+            <div class="confirm-item">当前时间：2018-02-05 17:40:58</div>
+            <div class="confirm-item">专送寝室时间：(11:10-13:00,17:20-20:30)</div>
+            <div class="confirm-item">此时商品由<span class="item-plate">超急邦配送至寝室</span></div>
+            <div class="confim-oprate-area">
+                <div class="oprate-confrim-btn">确认</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--提示框-->
+<!--弹框的遮罩层-->
+<div id="maskDialog"></div>
+<!--其他遮罩层 如加载框-->
+<div id="otherMaskDialog"></div>
+<!-- 加载中操作转圈提示 -->
+<div id="loadingDialog" class="my-dialog">
+    <div class="my-dialog-body">
+        <img src="./themes/image/loading.gif">
+    </div>
+</div>
+
+<!--页面即将跳转提示框-->
+<div id="skipDialog" class="my-dialog">
+    <div class="my-dialog-body">
+        <img src="./themes/image/x-loading.gif">
+        <div class="desc-text">页面即将跳转，请稍等...</div>
+    </div>
+</div>
+
+<!--警告提示框-->
+<div id="alertDialog" class="my-alert-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe697;</i>
+        </div>
+        <div class="title-text">提示</div>
+        <div class="desc-text">页面已损坏无法打开</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--错误提示框-->
+<div id="errorDialog" class="my-error-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text">错误</div>
+        <div class="desc-text">加载失败</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--普通的友情提示框-->
+<div id="normalDialog" class="my-normal-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text">敬请期待</div>
+        <div class="desc-text">稍后会联系您</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--操作成功提示框-->
+<div id="successDialog" class="my-success-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe698;</i>
+        </div>
+        <div class="title-text">资料已经提交</div>
+        <div class="desc-text">审核将在三个工作日之后</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-cancel-oper" href="javascript:;">知道了</a>
+    </div>
+</div>
+
+<!--危险操作确认提示框-->
+<div id="dangerConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe69b;</i>
+        </div>
+        <div class="title-text">确认删除</div>
+        <div class="desc-text">确认删除选中的项目吗？</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确认</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!--正常的友情确认提示框-->
+<div id="normalConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text">订单操作</div>
+        <div class="desc-text">确认进行当前操作吗？</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+
+<!--操作成功后的确认提示框-->
+<div id="successConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe696;</i>
+        </div>
+        <div class="title-text">付款成功</div>
+        <div class="desc-text">恭喜您所购商品付款成功</div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!--输入验证码确认提示框-->
+<div id="codeConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="code-wrap">
+            <input type="text" id="verifyCode" placeholder="请输入验证码">
+            <img id="verifyCodeImg" src="">
+        </div>
+        <div class="title-text"></div>
+        <div class="desc-text"></div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!--输入退款原因确认提示框-->
+<div id="reasonConfirmDialog" class="my-confirm-dialog my-dialog">
+    <div class="my-dialog-header">
+        <i class="icon iconfont icon-close">&#xe614;</i>
+    </div>
+    <div class="my-dialog-body">
+        <div class="title-icon">
+            <i class="icon iconfont">&#xe699;</i>
+        </div>
+        <div class="title-text"></div>
+        <div class="desc-text"></div>
+        <div class="code-wrap">
+            <input type="text" id="refund-reason" placeholder="请输入退款原因">
+            <img id="verifyCodeImg" src="">
+        </div>
+    </div>
+    <div class="my-dialog-footer">
+        <a class="btn-confirm-oper btn-left" href="javascript:;">确定</a>
+        <a class="btn-cancel-oper btn-right" href="javascript:;">取消</a>
+    </div>
+</div>
+
+<!-- 模态框（Modal） 操作确认提示框-->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title">
+                    确认提示框
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger">确认删除吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-confirm">确认</button>
+                <button type="button" class="btn btn-default close-action" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+<script src="../js/jquery-1.11.0.js"></script>
+
+<script src="../js/common.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript" src="../js/confirmOrder.js"></script>
+
+</body>
+</html>

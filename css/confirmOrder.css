@@ -1,0 +1,449 @@
+/*******************************
+ ------待付款订单页面样式-------
+ ---------author:joy-----------
+ -------data:2016-09-14---------
+ *******************************/
+.top{
+	position: relative;
+}
+#content{
+	background:#f3f3f3;
+}
+#content .order-address-area{
+	background: #fff;
+}
+#content .address-top-area{
+	background: #f3f3f3;
+	padding: 0 10px;
+    border-bottom: 1px solid #dcdcdc;
+}
+#content .address-top-area.order-bottom{
+	background: #fff;
+	border: 0;
+	padding-top: 10px;
+}
+#content .address-top-area.order-bottom span{
+	border: 0;
+}
+#content .address-top-area a{
+    text-decoration: none;
+    float: right;
+    margin-left: 15px;
+    color: #333;
+    display: inline-block;
+	line-height: 32px;
+}
+#content .address-top-area a i{
+	margin-right: 5px;
+}
+#content .address-top-area span{
+	display: inline-block;
+	line-height: 32px;
+	color: #333;
+	font-size: 15px;
+	border-bottom: 2px solid #009a44;
+}
+#content .address-list{
+	margin-bottom: 20px;
+	border-bottom: 1px solid #dcdcdc;
+}
+#content .address-list p.text-danger{
+	line-height: 35px;
+	padding: 0 10px;
+}
+#content .address-list .address-area{
+    padding: 5px 0;
+    position: relative;
+}
+#content .address-list .select-area{
+	display: inline-block;
+    float: left;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 6px;
+}
+#content .address-list .receiver-info{
+	height: 50px;
+}
+#content .address-list .phone{
+    margin-left: 50px;
+}
+#content .address-list .callname-phone-info{
+    line-height: 30px;
+}
+#content .address-list .callname-phone-info .name{
+	font-size: 15px;
+}
+#content .address-info{
+    color: #666666;
+    font-size: 12px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#content .address-list a{
+    text-decoration: none;
+}
+.address-list .item-select i{
+    display: none;
+}
+.address-list .item-select i.selected{
+    color:#009a44;
+}
+.address-list .item-select i.un-selected
+{
+    color: #CCCCCC;
+}
+
+#content .tip-info{
+    display: none;
+    color: #cc0000;
+    background: #FBEFEF;
+    padding: 3px 0;
+}
+/**订单商品列表**/
+.order-goods-list{
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom:12px;
+}
+.order-goods-list .shop-info{
+	padding-bottom:5px;
+	border-bottom: 1px solid #eee;
+	margin-bottom:8px;
+}
+.order-goods-list .shop-info .icon{
+	margin-right:3px;
+	position:relative;
+	top:1px;
+	color:#ff8000;
+}
+.order-goods-list .shop-address{
+	color:#666;
+}
+.order-goods-list .dining-info{
+	display:-webkit-box;
+	color:#666;
+	height:30px;
+	line-height:20px;
+}
+.order-goods-list .dining-name{
+	width:60%;
+}
+.order-goods-list .dining-count,
+.order-goods-list .dining-money{
+	width:20%;
+	text-align:right;
+}
+.order-goods-list .dining-send{
+	height:41px;
+	line-height:40px;
+	border-top:1px solid #eee;
+	display:-webkit-box;
+}
+.order-goods-list .dining-send>div,
+.order-goods-list .money>div
+{
+	/*width:50%;*/
+}
+.order-goods-list .dining-price{
+	text-align:right;
+	color:#ff8000;
+}
+.order-goods-list .money{
+	height:40px;
+	line-height:40px;
+	display:-webkit-box;
+}
+.order-goods-list .total-pay{
+	/*text-decoration: line-through;
+	color:#999;*/
+    color: #e57f23;
+
+}
+.order-goods-list .true-money{
+	text-align:right;
+}
+.order-goods-list .true-pay{
+	color:#ff8000;
+}
+.dining-info-area{
+	padding:10px;
+	background:#fff;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	margin-bottom:50px;
+}
+.dining-info-area .send-time{
+	padding-top:10px;
+	color:#666;
+	font-size:12px;
+}
+.dining-info-area .time{
+	color:#ff8000;
+}
+.dining-info-area .dining-info-list{
+	height:40px;
+	line-height:40px;
+	position:relative
+}
+.dining-info-area .dining-item{
+	width:80px;
+	position:absolute;
+	left:0;
+}
+.dining-info-area .input-item{
+	text-align:right;
+	display:block;
+	width:100%;
+	padding-left:80px;
+	border:none;
+	outline:none;
+}
+/**订单底部**/
+.order-bottom-area .pay-method-area{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 640px;
+	background: #fff;
+    margin: 0;
+	text-align: center;
+	border-top: 1px solid #f3f3f3;
+}
+.order-bottom-area .pay-method-area div{
+	padding: 0;
+}
+.order-bottom-area .pay-method-area .pay-total{
+	width: 50%;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+.order-bottom-area .pay-method-area .pay-total span{
+	color: #ff8000;
+}
+.pay-method-area .pay-method{
+	width: 50%;
+	float: right;
+}
+.pay-method-area .pay-method a{
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    display: block;
+    background: #ccc;
+    color: #ffffff;
+}
+.pay-method-area .pay-method a.able.active{
+	background: #009a44;
+}
+.pay-method-area .pay-method a i{
+	padding-right: 5px;
+}
+.order-bottom-area .order-fee{
+	clear:both;
+	padding-right:10px;
+	text-align:right;
+}
+.order-bottom-area .order-fee .fee{
+	color: #FF5C00;
+}
+.order-bottom-area .order-fee .order-fee-title{
+	font-size:12px;
+}
+.order-bottom-area .coupon-list .after-coupon{
+	padding-right:0px;
+}
+#content .discount-down-price{
+	width:80px;
+}
+#content .discount-down{
+	float:right;
+	text-align:right;
+	color: #c00;
+	font-size: 12px;
+}
+
+.balance-money p{
+	float: right;
+}
+/* 积分的样式 */
+.balance-money p{
+	margin: 0;
+	line-height: 35px;
+	width : 100%;
+}
+span.total-balance {
+    font-size: 16px;
+    color: #FF7527;
+}
+.balance-money p.p1{
+	color: #000;
+    font-size: 15px;
+    font-weight: bold;
+}
+.balance-money p.p1.active{
+	color:#009A00;
+}
+.balance-money p.p1 .right{
+	float: right;
+}
+
+.balance-money p.p1 .right i{
+	font-size: 22px;
+	color: #aaa;
+}
+.balance-money p.p1.active .right i{
+	color:#FF5C00;
+}
+.balance-money p.p1 .right i.color{
+	color: #009A00;
+}
+.dining-price {
+    position: absolute;
+    right: 10px;
+}
+.dining-title {
+    width: 100%;
+}
+.true-money {
+    width: 50%;
+}
+.total-money {
+    width: 50%;
+}
+.shop-discount-full-cut {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: red;
+}
+span.item-1 {
+    color: red;
+}
+
+.confirm-order-dialog {
+	display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.confirm-order-panel {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 260px;
+}
+.confirm-order-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 10px 0px;
+}
+i.icon.iconfont.close-dialog {
+    font-size: 18px;
+}
+.confirm-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.confirm-item {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #666;
+}
+.confirm-tip {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    color: green;
+}
+i.icon.iconfont.tip-iconfont {
+    font-size: 44px;
+}
+.tip-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    padding-bottom: 5px;
+}
+.confim-oprate-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.oprate-confrim-btn {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    background: green;
+    color: #fff;
+}
+span.item-plate {
+    color: #e57f23;
+}
+
+.sending-model-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.sending-model-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+    color: #aaa;
+}
+.sending-model-list i{
+	font-size: 22px;
+    
+}
+.model-list-text {
+    font-weight: 700;
+}
+
+.sending-model-list.active{
+	color:red;
+}
+

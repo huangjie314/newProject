@@ -30,16 +30,16 @@ $(function(){
         var status = $(this).data('status');
         switch(status){
             case '':
-                window.open('../view/orderList.html');
+                window.open('../view/orderList.html', '_self');
                 break;
             case 3:
-                window.open('../view/cooking.html');
+                window.open('../view/cooking.html', '_self');
                 break;
             case 4:
-                window.open('../view/delivering.html');
+                window.open('../view/delivering.html', '_self');
                 break;
             case 5:
-                window.open('../view/completeDelivery.html');
+                window.open('../view/completeDelivery.html', '_self');
                 break;
 
         }

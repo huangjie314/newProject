@@ -379,25 +379,6 @@ $(function(){
                         	starHtml += '<em style="color:green; padding-left:0px;font-size:16px;">'+score+'分</em>';
                         }
 
-
-
-
-                        //注释段代码为显示是否有男女配送员，因需求改变故注释此段，如有类似需求，可放出来
-//                      var maleSender = obj.maleSender;
-//                      var femaleSender = obj.femaleSender;
-//                      var maleSenderHtml = "";
-//                      var femaleSenderHtml = "";
-//                      if(maleSender == 0){
-//                     		maleSenderHtml = '<span style="color:red;">无</span>';
-//                      }else{
-//                      	maleSenderHtml = '<span style="color:green;">有</span>';
-//                      }
-//                      if(femaleSender == 0){
-//                      	femaleSenderHtml = '<span style="color:red;">无</span>';
-//                      }else{
-//                      	femaleSenderHtml = '<span style="color:green">有</span>';
-//                      }
-
 						var shopMessage = "";
 						var sexHtml = "";
 						if(is_plate_time == 1){//超级邦订餐时间

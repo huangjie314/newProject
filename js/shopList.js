@@ -1,9 +1,3 @@
-/**
- * 练习详情界面js
- * @author lynn
- * @since 2016-07-26
- */
-
 $(function(){
 	var shop_sender_time = $('#container .goods-wrap').attr('data-sender-time');
 	var is_plate_time = $('#container .goods-wrap').attr('data-is-plate-time');
@@ -11,10 +5,10 @@ $(function(){
      * 初始化
      */
     function init(){
-       /* getPageOption($("#get-more"),{});*/
+        getPageOption($("#get-more"),{});
     	isPageScroll(function(){render(0)});
         bindEvent();
-        render(1);
+       /* render(1);*/ //暂时注释
     }
 
     /**
@@ -113,7 +107,6 @@ $(function(){
             data:selectInfo,
             dataType:"json",
             success:function(result,statusText){
-                alert(result.errorCode)
                 if(result.errorCode == 0){
                 	var html = ""
                 	var myList = result.data;
@@ -122,6 +115,7 @@ $(function(){
                     for(var i = 0; i < myList.length;i++){
                     	var obj = myList[i];
                     	var id = obj.id;
+
                         var shopMessage = "";
 						var sexHtml = "";
 						if(is_plate_time == 1){//超级邦订餐时间
@@ -176,7 +170,6 @@ $(function(){
                         }else if(is_discount == 1){
                         	shopInfoHtml = '<span class="full-cut-price"><i class="icon iconfont item-full-cut">&#xe878;</i>全场'+discount+'折</span>';
                         }
-                        alert('id=>'+id);
                 		html += '<a href="./index.php?c=dining&a=shopInfo&shop_id='+id+'" class="goods-list">'
 								+ '<img src="'+obj.thumb+'" class="goods-img" />'
 								+ '<div class="goods-name limit-text">'+obj.shop_name+'</div>'
@@ -185,8 +178,6 @@ $(function(){
 								+ '<div class="goods-info limit-text">配送时间'+shop_sender_time+'</div>'
 								+ '<div class="goods-price">配送费0</div>'
 								+ '<span class="goods-sale">月售'+obj.total_count+'份</span>'
-//								+ '<span class="sender-male">男配送员：'+maleSenderHtml+'</span>&nbsp;|&nbsp;'
-//	                            + '<span class="sender-female">女配送员：'+femaleSenderHtml+'</span>'
 								+ sexHtml
 							 	+ shopMessage
 							 	+ shopInfoHtml
