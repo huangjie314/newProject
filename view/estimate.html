@@ -15,71 +15,7 @@
     <link rel="stylesheet"  href="../css/common.css">
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
     <link rel="stylesheet"  href="../css/estimate.css">
-    <style type="text/css">
-        body{
-            background: #f7f7f7;
-        }
-        #container .header {
-            text-align: center;
-            background-color: #ffffff;
-            color: #505050;
-            font-size: 16px;
-            height: 40px;
-            line-height: 40px;
-            position: relative;
-            margin-bottom: 10px;
-        }
-        #container .header .header-left {
-            display: inline-block;
-            height: 40px;
-            position: absolute;
-            left: 0px;
-            width: 50px;
-            color: #494949;
-        }
-        #container .header .header-left .icon {
-            font-size: 20px;
-        }
-        .content{background: #fff;}
-        .sales{
-            position: relative;
-            padding-left: 45px;
-            background: #fff;
-            border-bottom: 1px solid #e6e6e6;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .sales .img{
-            position: absolute;
-            left: 0px;
-            height: 38px;
-            width: 38px;
-            border-radius: 50%;
-        }
-        .sales .info .name{
-            padding-bottom:4px;
-        }
-        .sales .info .time{
-            font-size: 12px;
-        }
-        .zan{
-            text-align: center;
-            background: #fff;
-            padding: 10px 0;
-        }
-        .zan .zan-btn-area{
-            width: 30%;
-            border: 1px solid #e5e5e5;
-            padding:5px 10px;
-            border-radius: 15px;
-            margin:0 auto;
-        }
-         .zan .zan-btn-area.already-zan{
-            color: #EA6868;
-            border: 1px solid;
-         }
 
-    </style>
 </head>
 <body>
     <!--主容器-->
@@ -90,7 +26,7 @@
                     <i class="icon iconfont">&#xe62a;</i>
                 </a>
             </div>
-            <div class="content">
+            <div class="content-block">
                 <div class="container-fluid">
                     <div class="sales">
                         <img class="img" src="https://fuss10.elemecdn.com/c/f5/d0b0f2fc83f3ac3e4a0cfae891256png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/">
@@ -100,18 +36,65 @@
                         </div>
                     </div>
                      <div class="zan">
-                        <div class="zan-btn-area already-zan"><i class="icon iconfont zan-item "></i> 赞</div>
+                        <div class="zan-btn-area"><i class="icon iconfont zan-item "></i> 赞</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="container-fluid">
+                    <div class="seller">
+                        <img class="img" src="../image/20170523113702284_thumb.jpg">
+                        <div class="info">
+                            正新鸡排(华凯广场店)
+                        </div>
+                    </div>
+                    <div class="estimate-block">
+                        <div class="star">
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                        </div>
+                        <div class="textarea">
+                            <textarea class="estimate-text" rows="5" placeholder="亲，对菜品口味如何，对包装服务等还满意吗？"></textarea>
+                            <p class="least">至少输入8个字</p>
+                        </div>
+                        <div class="upload-photos">
+                            <img src="../image/upload/upload.jpg">
+                            <div class="info">
+                                <div class="title">上传图片</div>
+                                <p>内容丰富的评价有机会成为优质评价噢！</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="seller">
-                    <img class="img" src="https://fuss10.elemecdn.com/c/f5/d0b0f2fc83f3ac3e4a0cfae891256png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/">
-                    <div class="info">
-                        正新鸡排(华凯广场店)
-                    </div>
+                <div id="select" class="select">
+                    <i class="icon iconfont all-selected" style="display: none;">&#xe698;</i>
+                    <i class="icon iconfont not-all-selected">&#xe618;</i>
+                    <span>匿名评价</span>
                 </div>
+            </div>
+            <div class="refer-btn">
+               提交
             </div>
         </div>
     </div>
 <script src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+    $('#select').on('click','i', function(){
+        var _this = $(this);
+        if(_this.hasClass('all-selected')){
+            $('.not-all-selected').css({'display': 'inline-block'});
+            _this.css({'display': 'none'});
+        } else {
+            $('.all-selected').css({'display': 'inline-block'});
+             _this.css({'display': 'none'});
+        }
+    });
+    $('.zan-btn-area').click(function(){
+        $(this).toggleClass('already-zan');
+    })
+</script>
