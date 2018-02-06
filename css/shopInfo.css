@@ -88,18 +88,181 @@ span.get-money {
     left: 0px;
     background: #fff;
 }
-.item.shop-detail,.item.choose-goods {
-    width: 50%;
+.item.shop-detail,.item.choose-goods,.item.goods-comment{
+    width: calc(100%/3);
     float: left;
     line-height: 40px;
     text-align: center;
     border-bottom: 1px solid #ccc;
     color:#ccc;
 }
-.goods-list-area.current,.shop-list-area.current{
+
+/*评价*/
+.comment-list-area{
+    margin-left: -90px;
+}
+.comment-list-area .multiple{
+    background-color: #fff;
+    margin-bottom: .266667rem;
+    margin-bottom: 2.666667vw;
+    padding: .4rem;
+    padding: 4vw;
+    font-size: .36rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    margin-top: 1px;
+}
+
+.comment-list-area section.multiple{
+    padding: 10px;
+    font-size: 12px;
+    line-height: 24px;
+    position: relative;
+
+}
+.comment-list-area strong{
+    color: red;
+    font-size: 24px;
+}
+.comment-list-area .overall-score{
+    width: 36%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+.comment-list-area .overall-score:after{
+    display: block;
+    content: "";
+    width: 1px;
+    height: 68px;
+    background-color: #dedede;
+    position: absolute;
+    top: 16%;
+    margin-left: 36%;
+}
+.comment-list-area .overall-detail{
+    display: inline-block;
+    margin: 0 auto;
+}
+.comment-list-area .overall-detail i {
+    font-size: 14px;
+}
+.comment-list-area .list {
+    background-color: #fff;
+    padding: 2.666667vw 3.2vw 0;
+    font-size: .36rem;
+}
+.comment-list-area .list .title{
+    padding-bottom: 2.666667vw;
+    border-bottom: 1px solid #ddd;
+}
+.comment-list-area .list .title li{
+    display: inline-block;
+    padding: 0 2.4vw;
+    height: 7.466667vw;
+    line-height: 7.466667vw;
+    margin: .933333vw;
+    font-size: .32rem;
+    border-radius: .533333vw;
+    color: #6d7885;
+    background-color: #ebf5ff;
+}
+.comment-list-area .list .title li.active{
+    color: #fff;
+    background-color: #009943;
+}
+.comment-list-area .list .comment-text li{
+    padding: .4rem 0;
+    padding: 4vw 0;
+    border-bottom: .013333rem solid #ddd;
+    border-bottom: .133333vw solid #ddd;
+}
+.comment-list-area .list .comment-text .comment-block{
+    position: relative;
+    padding-left: 1.2rem;
+    padding-left: 12vw;
+}
+.comment-list-area .list .comment-text .comment-block .head-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .8rem;
+    width: 8vw;
+    height: .8rem;
+    height: 8vw;
+    border-radius: 50%;
+    max-width: 100%;
+}
+.comment-list-area .list .comment-text .comment-block-info{
+    font-size: .346667rem;
+}
+.comment-list-area .list .comment-text .person{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}.comment-list-area .list .comment-text .person h3 {
+    font-size: .346667rem;
+    margin-top: 0;
+    color: #333;
+    margin-right: .16rem;
+    margin-right: 1.6vw;
+    margin-bottom: 0;
+}
+.comment-list-area .list .comment-text .person small{
+     font-size: .293333rem;
+    color: #bbb;
+}
+.comment-list-area .list .comment-text .star i {
+    font-size: 14px;
+}
+.comment-list-area .list .comment-text .times{
+    font-size: .266667rem;
+    color: #999;
+    vertical-align: middle;
+}
+.comment-list-area .list .comment-text .text{
+    color: #333;
+    font-size: .373333rem;
+    margin: .213333rem 0;
+    margin: 2.133333vw 0;
+}
+.comment-list-area .list .comment-text .dishes-img .img-list{
+    width: 100px;
+    height:100px;
+}
+.comment-list-area .list .comment-text .dishes li {
+    display: inline-block;
+    font-size: .293333rem;
+    color: #6d7885;
+    border: 1px solid #eee;
+    padding: 0.106667rem 0.266667rem;
+    margin: .093333rem;
+    margin: .933333vw;
+    border-radius: .053333rem;
+    border-radius: .533333vw;
+    max-width: 1.6rem;
+    max-width: 16vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+.goods-list-area.current,.shop-list-area.current,.comment-list-area.current{
 	display: block;
 }
-.goods-list-area,.shop-list-area{
+.goods-list-area,.shop-list-area,.comment-list-area{
 	display: none;
 }
 

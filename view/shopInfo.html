@@ -45,9 +45,11 @@
         </div>
         <div class="dining-wrap" >
             <div class="banner-tap">
-                <div class="item choose-goods cur">选购菜品</div>
-                <div class="item shop-detail">店铺详情</div>
+                <div class="item choose-goods cur">点餐</div>
+                <div class="item goods-comment">评价</div>
+                <div class="item shop-detail">商家</div>
             </div>
+            <!-- 点餐 -->
             <div class="goods-list-area current" >
                 <div class="cate-area row">
                     <div class="fir-cate">
@@ -68,10 +70,25 @@
                     <div class="fir-cate">
                         <span class="cate-list fir limit-text" data-id="552">特色炒面</span>
                     </div>
+                    <div class="fir-cate">
+                            <span class="cate-list fir limit-text" data-id="85">冰纷圣代</span>
+                            <div class="sec-cate">
+                                <span class="cate-list sec limit-text" data-id="86">小青菜</span>
+                                <div class="thr-cate">
+                                    <span class="cate-list thr limit-text" data-id="87">娃娃菜</span>
+                                </div>
+                                <div class="thr-cate">
+                                    <span class="cate-list thr limit-text" data-id="89">菜花</span>
+                                </div>
+                            </div>
+                            <div class="sec-cate">
+                                <span class="cate-list sec limit-text" data-id="88">黄豆</span>
+                            </div>
+                    </div>
                 </div>
                 <div class="dining-area">
                     <div class="dining-list">
-                        <a href="./index.php?c=dining&a=goodsDetail&gid='+id+'&shop_id='+shop_id+'">
+                        <a href="./goodsDetail.html?c=dining&a=goodsDetail&gid='+id+'&shop_id='+shop_id+'">
                             <img src="../image/20170523113702284_thumb.jpg" class="dining-img"/>
                             <div class="dining-name limit-text">辣椒炒肉</div>
                             <div class="dining-info">
@@ -85,7 +102,7 @@
                         </div>
                     </div>
                     <div class="dining-list">
-                        <a href="./index.php?c=dining&a=goodsDetail&gid='+id+'&shop_id='+shop_id+'">
+                        <a href="./goodsDetail.html?c=dining&a=goodsDetail&gid='+id+'&shop_id='+shop_id+'">
                             <img src="../image/20170523113702284_thumb.jpg" class="dining-img"/>
                             <div class="dining-name limit-text">木耳炒肉</div>
                             <div class="dining-info">
@@ -100,6 +117,122 @@
                     </div>
                 </div>
             </div>
+            <!-- 评价 -->
+            <div class="comment-list-area">
+                <section class="multiple">
+                    <div class="overall-score">
+                        <strong>4.0</strong>
+                        <p>综合评价</p>
+                        <p>高于周边商家30.8%</p>
+                    </div>
+                    <div class="overall-detail">
+                        <div>
+                            <span>服务态度</span>
+                            &nbsp;
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont unstar">&#xe642;</i>
+                            &nbsp;
+                            <span class="score">4.7</span>
+                        </div>
+                        <div>
+                            <span>商品评分</span>
+                            &nbsp;
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont star">&#xe641;</i>
+                            <i class="icon iconfont unstar">&#xe642;</i>
+                            &nbsp;
+                            <span class="score">4.6</span>
+                        </div>
+                        <div>
+                            <span>送达时间</span>
+                            &nbsp;
+                            <span>32分钟</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="list">
+                    <div class="title">
+                        <ul>
+                            <li class="active">全部(150)</li>
+                            <li>满意(141)</li>
+                            <li>不满意(9)</li>
+                            <li>有图(0)</li>
+                      </ul>
+                    </div>
+                    <ul class="comment-text">
+                        <li>
+                            <div class="comment-block">
+                                <img class="head-img" src="https://fuss10.elemecdn.com/c/f5/d0b0f2fc83f3ac3e4a0cfae891256png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/">
+                                <div class="comment-block-info">
+                                    <div class="person">
+                                        <h3>匿名用户</h3>
+                                        <small>2018-02-05</small>
+                                    </div>
+                                    <div class="star">
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont unstar">&#xe642;</i>
+                                        <span class="times">40分钟送达</span>
+                                    </div>
+                                    <div class="text">晚了40分钟</div>
+                                    <!---->
+                                     <!---->
+                                     <!---->
+                                    <div class="dishes">
+                                        <ul>
+                                            <li>茶树菇炖鸡汤</li>
+                                            <li>洋葱猪扒煎蛋饭</li>
+                                        </ul>
+                                    </div>
+                                <div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="comment-block">
+                                <img class="head-img" src="https://fuss10.elemecdn.com/c/f5/d0b0f2fc83f3ac3e4a0cfae891256png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/">
+                                <div class="comment-block-info">
+                                    <div class="person">
+                                        <h3>匿名用户</h3>
+                                        <small>2018-02-05</small>
+                                    </div>
+                                    <div class="star">
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont star">&#xe641;</i>
+                                        <i class="icon iconfont unstar">&#xe642;</i>
+                                        <span class="times">准时到达</span>
+                                    </div>
+                                    <div class="text">
+                                        服务很好，味道很好。外卖小哥辛苦了，么么哒！
+                                    </div>
+                                    <div class="dishes-img">
+                                        <a href="javascript:;"><img src="../image/upload/1.jpg"  class="img-list"></a>
+                                        <a href="javascript:;"><img src="../image/upload/2.jpg"  class="img-list"></a>
+                                    </div>
+                                    <!---->
+                                     <!---->
+                                     <!---->
+                                    <div class="dishes">
+                                        <ul>
+                                            <li>茶树菇炖鸡汤</li>
+                                            <li>洋葱猪扒煎蛋饭</li>
+                                        </ul>
+                                    </div>
+                                <div>
+                             </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <!-- 商家 -->
             <div class="shop-list-area">
                 <div class="user-area user-area-0">
                     <div class="user-info">
@@ -117,7 +250,7 @@
                     </div>
                 </div>
 
-                <div class="user-area user-area-0" hidden="hidden">
+                <div class="user-area user-area-0">
                     <div class="user-info">
                         <a>
                             <i class="icon iconfont">&#xe632;</i>00:47-21:00
@@ -132,7 +265,7 @@
                         </a>
                     </div>
                 </div>
-                                <div class="user-area user-area-0" hidden="hidden">
+                <div class="user-area user-area-0">
                     <div class="user-info">
                         <a>
                             <i class="icon iconfont">&#xe62f;</i>起送价0元
@@ -140,7 +273,7 @@
                     </div>
                 </div>
 
-                <div class="user-area user-area-0" hidden="hidden">
+                <div class="user-area user-area-0">
                     <div class="user-info">
                         <a>
                             <i class="icon iconfont">&#xe7ba;</i>配送距离为真味一家公里

@@ -1,6 +1,3 @@
-/*************************
- ------会员中心页面样式---
- *************************/
 .top{
 	position: relative;
 }
@@ -46,6 +43,49 @@ a.account-recharge:hover {
     padding: 2px;
     border: 1px solid #fff;
 }
+
+.grid-tab{
+    display: table;
+    width: 100%;
+    height: 2.24rem;
+    height: 22.4vw;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.grid-list{
+    display: table-cell;
+    width: 33.3333%;
+    vertical-align: middle;
+    text-align: center;
+}
+.grid-list:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+.grid-list .num {
+    padding: .453333rem 0 .293333rem;
+    padding: 4.533333vw 0 2.933333vw;
+    font-size: 6.933333vw;
+    line-height: .693333rem;
+    line-height: 6.933333vw;
+    font-weight: 700;
+}
+.grid-list .txt {
+    font-size: .32rem;
+    line-height: .32rem;
+    line-height: 3.2vw;
+}
+.grid-list .my-account,.grid-list .my-point{
+    margin-top: .133333rem;
+    margin-top: 1.333333vw;
+    font-size: .32rem;
+    line-height: .373333rem;
+    line-height: 3.733333vw;
+    font-weight: 500;
+    color: #666;
+    font-weight: 700;
+}
+
 .order-area .all-order{
 	padding: 0 10px;
 	background: #fff;
@@ -53,7 +93,7 @@ a.account-recharge:hover {
 .order-area .all-order a{
 	float: left;
 	color: #303030;
-	
+
 }
 .order-area .all-order a.left i{
 	margin-right: 5px;
@@ -94,7 +134,7 @@ a.account-recharge:hover {
 	height: 20px;
 	line-height: 20px;
 	padding-left: 20px;
-	
+
 }
 .order-area .quick-btn .order-btn span.goods-num span{
 	display: block;

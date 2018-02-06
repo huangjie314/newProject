@@ -3,6 +3,7 @@
 <html lang="zh-cn">
 <head>
     <title>确认订单</title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -10,7 +11,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="XXXX">
     <meta name="robots" content="index,follow">
-    <meta name="application-name" content="XXXX">
+    <meta name="application-name" content="www.XXXX.com">
 
     <link rel="stylesheet"  href="../css/iconfont.css">
     <link rel="stylesheet"  href="../css/common.css">
@@ -28,11 +29,12 @@
     <div id="content">
         <div class="order-address-area">
             <div class="address-top-area">
-                <span>选择收货地址</span><a href="./index.php?c=base_user&a=addressList"><i class="icon iconfont">&#xe61a;</i>地址管理</a>
+                <span>选择收货地址</span>
+                <a href="./addressList.html"><i class="icon iconfont">&#xe61a;</i>地址管理</a>
                 <a href="javascript:window.location.reload();">刷新</a>
             </div>
             <div class="address-list">
-                                                <div class="address-area clearfix" data-id="4273">
+                <div class="address-area clearfix" data-id="4273">
                     <div class="hidden address-type"  data-type='0'></div>
                     <!--选择区域-->
                     <div class="select-area">
@@ -53,7 +55,7 @@
 
                 </div>
 
-                                <div class="address-area clearfix" data-id="4274">
+                <div class="address-area clearfix" data-id="4274">
                     <div class="hidden address-type"  data-type='0'></div>
                     <!--选择区域-->
                     <div class="select-area">
@@ -73,8 +75,6 @@
                     </div>
 
                 </div>
-
-
             </div>
         </div>
 
@@ -82,16 +82,16 @@
             <span>订餐信息</span>
         </div>
         <!--待付款订单的商品列表-->
-        <div class="order-goods-list" data-is-plate-time="1">
+        <div class="order-goods-list" data-is-plate-time="0">
             <div class="shop-info limit-text"><i class="icon iconfont">&#xe710;</i><span class="shop-address">（）</span></div>
-                                    <div class="dining-send">
+            <div class="dining-send">
                 <div class="dining-title">餐盒费</div>
                 <div class="dining-price"><i class="icon iconfont">&#xe604;</i>0.9</div>
             </div>
                         <!--商家打折、减免-->
             <div class="shop-discount-full-cut">
                             </div>
-                                            <div class="balance-money row">
+                <div class="balance-money row">
                     <div class ="row list list-1">
                         <p class = 'p1' data-balance="0.9">
                             <span class="left">您拥有饭票<span class='total-balance'>10.00</span>元，可使用<span id="balance-money" data-balance="0.9" style="color: #FF7527;" >0.9</span>元支付</span>
@@ -101,14 +101,22 @@
                     <div class ="reduce row">
                     </div>
                 </div>
-                                        <div class="money">
+            <div class="money">
                 <div class="total-money">总计：<span class="total-pay"><i class="icon iconfont">&#xe604;</i>0.9</span></div>
                 <div class="true-money" data-total-price="0.9">实付款：<i class="icon iconfont">&#xe604;</i><span class="true-pay">0.9</span></div>
             </div>
         </div>
 
         <div class="sending-model-area">
-                    </div>
+            <div class="sending-model-list active" data-sending-type='0'>
+                <div class="model-list-text">立即送：由商家自行送至楼下</div>
+                <i class="icon iconfont">&#xe616;</i>
+            </div>
+            <div class="sending-model-list" data-sending-type='1'>
+                <div class="model-list-text">预订送:由超急邦在11:20-13:00和17:20-20:30送至寝室</div>
+                <i class="icon iconfont">&#xe616;</i>
+            </div>
+        </div>
 
 
         <div class="dining-info-area">
@@ -122,7 +130,7 @@
             </div>
             <div class="send-time"></div>
         </div>
-        <div class="order-bottom-area" data-current-time="2018-02-05 17:40:58"   data-shop="" data-sender-time="11:20-13:00，17:20-20:30">
+        <div class="order-bottom-area" data-current-time="2018-02-06 08:18:37"   data-shop="" data-sender-time="11:20-13:00，17:20-20:30">
             <div class="pay-method-area row">
                 <div class="pay-total">合计：<span><i class="icon iconfont">&#xe604;</i></span><span class="real-price" id = "final-total-price" >0.9</span></div>
                 <div class="pay-method"><a class="submitOrder able active"><i class="icon iconfont">&#xe698;</i>提交订单</a></div>
@@ -138,9 +146,9 @@
         <div class="confirm-content">
             <div class="tip-icon"><i class="icon iconfont tip-iconfont">&#xe616;</i></div>
             <div class="confirm-tip">下单成功</div>
-            <div class="confirm-item">当前时间：2018-02-05 17:40:58</div>
+            <div class="confirm-item">当前时间：2018-02-06 08:18:37</div>
             <div class="confirm-item">专送寝室时间：(11:10-13:00,17:20-20:30)</div>
-            <div class="confirm-item">此时商品由<span class="item-plate">超急邦配送至寝室</span></div>
+            <div class="confirm-item">此时商品由<span class="item-plate">商家配送至楼下，无配送费</span></div>
             <div class="confim-oprate-area">
                 <div class="oprate-confrim-btn">确认</div>
             </div>
@@ -355,10 +363,10 @@
             </div>
         </div><!-- /.modal-content -->
     </div>
-</div>
+</div><!-- /.modal --><!--公用js文件-->
 <script src="../js/jquery-1.11.0.js"></script>
 
-<script src="../js/common.js"></script>
+<script src="../js/page.js"></script>
 <script src="../js/common.js"></script>
 <script type="text/javascript" src="../js/confirmOrder.js"></script>
 

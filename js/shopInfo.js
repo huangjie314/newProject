@@ -7,7 +7,7 @@ $(function(){
      */
     function init(){
         bindEvent();
-        render();//渲染菜品
+       /* render();*///渲染菜品//程序解除注释
     }
 
     /**
@@ -107,13 +107,14 @@ $(function(){
 
         //点击去付款
         $("#container .bottomNav").on("click",".payment.able.active",function(){
-        	window.location.href = "./index.php?c=dining&a=confirmOrder&shop_id="+shop_id;
+        	window.location.href = "./confirmOrder.html?c=dining&a=confirmOrder&shop_id="+shop_id;
         });
         $(".banner-tap .choose-goods").click(function(){
         	$(this).addClass("cur");
         	$(this).siblings().removeClass('cur');
         	$('.goods-list-area').addClass('current');
         	$('.shop-list-area').removeClass('current');
+            $('.comment-list-area').removeClass('current');
         	$('.bottomNav.cf').show();
         	$('.cart-wrap').show();
         });
@@ -122,8 +123,18 @@ $(function(){
         	$(this).siblings().removeClass('cur');
         	$('.shop-list-area').addClass('current');
         	$('.goods-list-area').removeClass('current');
+            $('.comment-list-area').removeClass('current');
         	$('.bottomNav.cf').hide();
         	$('.cart-wrap').hide();
+        });
+        $(".banner-tap .goods-comment").click(function(){
+            $(this).addClass("cur");
+            $(this).siblings().removeClass('cur');
+            $('.comment-list-area').addClass('current');
+            $('.shop-list-area').removeClass('current');
+            $('.goods-list-area').removeClass('current');
+            $('.bottomNav.cf').hide();
+            $('.cart-wrap').hide();
         });
 	}
 

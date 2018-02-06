@@ -43,7 +43,7 @@ $(function(){
     		$("#final-total-price").text(totalPrice);
     		$('.true-pay').text(totalPrice);
     	});
-    	
+
     	//配送方式
        	$('.sending-model-list').click(function(){
        		if(is_plate_time != 2){
@@ -55,11 +55,11 @@ $(function(){
 	       			$(this).siblings().removeClass('active');
 	       		}
        		}
-       		
+
        	});
-       
-       
-       
+
+
+
         //提交订单
         $('.submitOrder.able.active').click(function(){
             //验证收货地址
@@ -105,7 +105,7 @@ $(function(){
             	var curr = myDate.toLocaleDateString();     //获取当前日期
 	    		if(result.errorCode == 0){//成功
 //		    		showDialog('#successDialog','当前时间:'+curr,'专送寝室时间：（11:10-13:00，17:20-20:30）','',3000,function(){
-//		    			
+//
 //		    		});
 //					$('.confirm-order-dialog').show();
 //					confirmOrderModal(oid);
@@ -118,9 +118,9 @@ $(function(){
 	    	});
         });
     }
-    
+
     /**
-	 * 下单成功模态框显示方法 "fun = (param) =>{}" ES6箭头函数  <=> "fun(param){}" 
+	 * 下单成功模态框显示方法 "fun = (param) =>{}" ES6箭头函数  <=> "fun(param){}"
      */
     function confirmOrderModal(oid){
     	$(".oprate-confrim-btn,.confirm-order-top").click(function(){
@@ -129,9 +129,9 @@ $(function(){
 //  		window.location.href = "/pay/request/code.php?&oid="+oid+"&module=diningPay";
     	});
     }
-    
-    
-    
+
+
+
     /**
      * 余额支付
      */
@@ -150,22 +150,22 @@ $(function(){
     					window.location.href = "./index.php?c=dining&a=orderList&state=3";
     				}
 		    	//});
-    			
-    			
+
+
 //  			showDialog('#successDialog','支付成功',' ','',3000,function(){
 //  				if(rid != 0){
 //  					window.location.href = "./index.php?c=dining&a=redPacket&rid="+rid;
 //  				}else{
 //  					window.location.href = "./index.php?c=dining&a=orderList&state=3";
 //  				}
-//  				
+//
 //	    		});
     		}else{
     			showDialog('#errorDialog','下单失败',result.errorInfo,'',3000);
     		}
     	});
     }
-    
+
     /**
      * 获取总价
      */
@@ -211,9 +211,9 @@ $(function(){
 		    	});
 	    	}
     	}
-    	
+
     }
-    
+
     /**
      * 首次进入页面，判断骑手是否存在
      * @param {Object} type
@@ -245,8 +245,8 @@ $(function(){
 		    	});
 	    	}
     	}
-    	
+
     }
-    
+
     init();
 });
