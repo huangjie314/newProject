@@ -1,8 +1,3 @@
-/**
- * 推广页面
- * @since 2015-11-11
- * @author jjhu
- */
 $(function(){
     function init(){
 
@@ -15,12 +10,12 @@ $(function(){
     }
 
     function bindEvent(){
-    	
+
     	$('.share-btn').click(function(){
     		$(".guide").show();
     	});
-    	
-    	
+
+
         $(".guide").click(function(){
             $(this).hide();
         });

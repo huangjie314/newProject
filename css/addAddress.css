@@ -1,8 +1,3 @@
-/*******************************
- -------我的技师页面样式--------
- ---------author:jjhu-----------
- -------data:2015-08-28---------
- *******************************/
 html{
 	font-size:20px
 }
@@ -157,7 +152,7 @@ body{
 }
 #content tfoot a.back{
 	background: #f19772;
-	
+
 }
 #content table td.col-1{
 	text-indent: 10px;
