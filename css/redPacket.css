@@ -1,0 +1,210 @@
+/*************************
+ ---红包页面样式---
+ *************************/
+body{
+	background: #FFE9A5;
+}
+#container{
+    position: relative;
+    padding-bottom: 50px;
+    background-color:#FFE9A5;
+}
+#container #content{
+    background: #FFE9A5;
+}
+.redpacket-area{
+	display: flex;
+	
+}
+.operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 11%;
+    width: 100%;
+    color: #fff;
+}
+.redpacket-image {
+    position: relative;
+}
+.receive-btn ,.share-btn{
+    padding: 10px;
+    border: 1px solid #FF8903;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: #FF8903;
+}
+.receive-btn.unable-click ,.share-btn.unable-click{
+	background: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    color:#959595;
+}
+.redpacket-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.packet-list-button {
+    padding: 10px;
+    background: #ccc;
+    border: 1px solid;
+}
+
+.packet-list-button,.active-list-button {
+    padding: 10px 20px;
+    background: #FFF5D2;
+    border: 1px solid #D8C7BF;
+    border-radius: 5px;
+    text-align: center;
+    color: #3C352D;
+    margin:0 10px;
+}
+.packet-list-button.active,.active-list-button.active {
+	background: #E53C1D;
+    border: 1px solid #E53C1D;
+    color: #fff;
+}
+
+
+.packet-area {
+    padding: 10px;
+    width: 100%;
+	margin-top: 20px;
+}
+.packet-rule-area{
+	display: none;
+	background: #FFF5D2;
+	padding: 5px;
+	border: 1px solid #FFF5D2;
+	border-radius: 5px;
+}
+.packet-list-area{
+	background: #FFF5D2;
+	padding: 5px;
+	border: 1px solid #FFF5D2;
+	border-radius: 5px;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #DCD8D7;
+    padding-top: 5px;
+}
+.head-image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+img.head-img {
+    border-radius: 50%;
+}
+.item-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.item-content-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+.item-content-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+.win-money {
+    position: absolute;
+    top: 23%;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    color: #E8391A;
+}
+span.money {
+    font-size: 24px;
+}
+.guide {
+	display: none;
+    position: fixed;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+img.guide-image {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+    z-index: 999;
+    padding: 10px;
+}
+
+.follow-wechat-number{
+	display: none;
+	position: fixed;
+	background: rgba(0,0,0,0.6);
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+img.follow-image {
+    padding: 10px;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+}
+.follow-image-area {
+    background: #fff;
+    position: fixed;
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.follow-title {
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 4px;
+    left: 0px;
+    right: 0px;
+}
+.follow-info {
+    font-size: 18px;
+    padding: 10px;
+}
+

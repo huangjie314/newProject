@@ -19,6 +19,9 @@ img{
 a{
     text-decoration: none;
 }
+a:hover{
+    text-decoration:none;
+}
 p,ul,ol{
     margin: 0;
     padding: 0;
