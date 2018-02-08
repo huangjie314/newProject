@@ -141,7 +141,7 @@ a.goods-list {
 .goods-img{
 	width:100px;
 	position:absolute;
-	margin:auto;
+	margin:10px 0;
 	top:0;
 	bottom:0;
 	left:10px;
@@ -179,7 +179,7 @@ a.goods-list {
     -moz-animation: rotating 0.5s linear forwards;
     -o-animation: rotating 0.5s linear forwards;
     animation: rotating 0.5s linear forwards;
-    
+
 }
 
 @-webkit-keyframes rerotating{
@@ -203,7 +203,7 @@ a.goods-list {
     -moz-animation: rerotating 0.5s linear forwards;
     -o-animation: rerotating 0.5s linear forwards;
     animation: rerotating 0.5s linear forwards;
-    
+
 }
 span.full-cut-price {
     display: flex;

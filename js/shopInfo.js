@@ -55,14 +55,18 @@ $(function(){
 	    	var gid = _this.attr("data-id");
 	    	var num = parseInt(_this.next().text())-1;
 	    	_this.next().text(num);
-	    	$(".dining-area .goods-num[data-id='"+gid+"']").text(num);
+	    	//$(".dining-area .goods-num[data-id='"+gid+"']").text(num); //前端暂时不需要 暂时注释掉
+            var $diningBtn = _this.closest('.dining-btn'); //前端js
+            $diningBtn.find('.goods-num').text(num); //前端js
 	    	if(num <= 0){
 	    		if(_this.parents('.cartList-wrap').length > 0){//购物车列表中
 	    			_this.parents('tr').remove();
 	    		}
-	    		$(".dining-area .minus[data-id='"+gid+"'],.dining-area .goods-num[data-id='"+gid+"']").fadeOut(250).delay(250).addClass("hidden");
-	    	}
-	    	renderCartData(gid,num,0,0);
+	    		//$(".dining-area .minus[data-id='"+gid+"'],.dining-area .goods-num[data-id='"+gid+"']").fadeOut(250).delay(250).addClass("hidden");//前端暂时不需要 暂时注释掉
+	    	   $diningBtn.find('.goods-num').fadeOut(250).delay(250).addClass("hidden"); //前端js
+               $diningBtn.find('.minus').fadeOut(250).delay(250).addClass("hidden"); //前端js
+            }
+	    	//renderCartData(gid,num,0,0); //前端请求后台代码，暂时注释
 	    });
 
 	    //数量加
@@ -73,9 +77,17 @@ $(function(){
 	    	if(_this.parents('.cartList-wrap').length > 0){//购物车列表中
     			_this.prev().text(num);
     		}
-	    	$(".dining-area .goods-num[data-id='"+gid+"']").text(num);
-    		$(".dining-area .minus[data-id='"+gid+"'],.dining-area .goods-num[data-id='"+gid+"']").removeClass("hidden").fadeIn()
-	    	renderCartData(gid,num,1,0);
+            /****前端暂时不需要 暂时注释掉 start***/
+	    	/*$(".dining-area .goods-num[data-id='"+gid+"']").text(num);
+    		$(".dining-area .minus[data-id='"+gid+"'],.dining-area .goods-num[data-id='"+gid+"']").removeClass("hidden").fadeIn()*/
+            /****前端暂时不需要 暂时注释掉 end***/
+
+            /***前端js start***/
+            var $diningBtn = _this.closest('.dining-btn');
+            $diningBtn.find('.goods-num').text(num).removeClass('hidden').fadeIn();
+            $diningBtn.find('.minus').removeClass('hidden').fadeIn();
+             /***前端js end***/
+            //renderCartData(gid,num,1,0); //前端请求后台代码，暂时注释
 	    });
 
         //关闭开启购物车列表

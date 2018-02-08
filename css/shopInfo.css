@@ -305,19 +305,20 @@ span.get-money {
 	display:block;
 }
 .dining-wrap .cate-area{
-	float: left;
-    position: relative;
-    left: -90px;
-	width:90px;
-	height:100%;
-	background-color:#ddd;
-	overflow-y: auto;
+    position: absolute;
+    left: 0;
+    width: 90px;
+    height: auto;
+    background-color:#ddd;
+    overflow-y: hidden;
+    padding-bottom: 35px;
 }
 /***菜品列表***/
 .dining-area{
-	padding:10px 8px 35px 8px;
-	background-color:#fff;
-	min-height:300px;
+    background-color: #fff;
+    padding: 10px 8px 35px 8px;
+    height: auto;
+    overflow-y: hidden;
 }
 .dining-area .dining-list{
 	padding:10px 0 10px 85px;
@@ -359,7 +360,7 @@ span.get-money {
 	text-align:center;
 }
 .dining-list .goods-num{
-	border:1px solid #d58512;
+/*	border:1px solid #d58512;*/
 	line-height:23px;
 }
 .dining-list .minus,
