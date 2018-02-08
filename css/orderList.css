@@ -263,8 +263,15 @@ a.complain-btn.btn {
 }
 
 .zan-area {
-	display: flex;
+	display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+	display: -moz-box; /* 老版本语法: Firefox (buggy) */
+	display: -ms-flexbox; /* 混合版本语法: IE 10 */
+	display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+	display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
 	flex-direction: row;
+	-webkit-box-pack: space-between;
+	-moz-justify-content: space-between;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px 0px;

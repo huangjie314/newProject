@@ -13,13 +13,27 @@ body{
     background: #FFE9A5;
 }
 .redpacket-area{
-	display: flex;
-	
+	display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+display: -moz-box; /* 老版本语法: Firefox (buggy) */
+display: -ms-flexbox; /* 混合版本语法: IE 10 */
+display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+
 }
 .operation {
-    display: flex;
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+display: -moz-box; /* 老版本语法: Firefox (buggy) */
+display: -ms-flexbox; /* 混合版本语法: IE 10 */
+display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
     flex-direction: column;
-    justify-content: center;
+    -webkit-box-pack: center;
+-moz-justify-content: center;
+-webkit-justify-content: center;
+justify-content: center;
+       -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
     align-items: center;
     position: absolute;
     bottom: 11%;
@@ -44,15 +58,35 @@ body{
     color:#959595;
 }
 .redpacket-list {
-    display: flex;
+     display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
     flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
     align-items: center;
 }
 
 .button-group-list {
-    display: flex;
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
     justify-content: center;
+   -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
     align-items: center;
 }
 .packet-list-button {
@@ -97,8 +131,19 @@ body{
 }
 
 .list-item {
-    display: flex;
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     border-bottom: 1px solid #DCD8D7;
     padding-top: 5px;

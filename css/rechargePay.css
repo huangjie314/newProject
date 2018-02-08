@@ -61,6 +61,7 @@
 }
 #container .recharge-box .defined-area .defined{
 	height:34px;
+	line-height: 34px;
 	border:none;
 	outline: none;
 	position:absolute;
@@ -76,7 +77,7 @@
 	border:1px solid #ddd;
 }
 #container .recharge-box .item.active{
-	border:1px solid #a90505;
+	border:1px solid #ff2d4a;
 }
 #container .recharge-box .info{
 	color:#aaa;

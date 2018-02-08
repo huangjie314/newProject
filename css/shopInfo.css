@@ -1,3 +1,6 @@
+html{
+    font-size: 32px;
+}
 #container{
 	margin-bottom:51px;
 }
@@ -248,8 +251,8 @@ span.get-money {
     margin: .933333vw;
     border-radius: .053333rem;
     border-radius: .533333vw;
-    max-width: 1.6rem;
-    max-width: 16vw;
+    max-width: 2.4rem;
+    max-width: 24vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
