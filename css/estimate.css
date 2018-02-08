@@ -1,125 +1,128 @@
  body{
-            background: #f7f7f7;
-        }
-        #container .header {
-            text-align: center;
-            background-color: #ffffff;
-            color: #505050;
-            font-size: 16px;
-            height: 40px;
-            line-height: 40px;
-            position: relative;
-            margin-bottom: 10px;
-            text-decoration: none;
-        }
-        #container .header .header-left {
-            display: inline-block;
-            height: 40px;
-            position: absolute;
-            left: 0px;
-            width: 50px;
-            color: #494949;
-        }
-        #container .header .header-left .icon {
-            font-size: 20px;
-        }
-        .content-block{background: #fff;margin-bottom: 10px; }
-        .sales,.seller{
-            position: relative;
-            padding-left: 45px;
-            background: #fff;
-            border-bottom: 1px solid #e6e6e6;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .sales .img, .seller .img{
-            position: absolute;
-            left: 0px;
-            height: 38px;
-            width: 38px;
-            border-radius: 50%;
-        }
-        .sales .info .name{
-            padding-bottom:4px;
-        }
-        .sales .info .time{
-            font-size: 12px;
-        }
-        .zan,.star{
-            text-align: center;
-            background: #fff;
-            padding: 10px 0;
-        }
-        .zan .zan-btn-area{
-            width: 30%;
-            border: 1px solid #e5e5e5;
-            padding:5px 10px;
-            border-radius: 15px;
-            margin:0 auto;
-        }
-         .zan .zan-btn-area.already-zan{
-            color: #EA6868;
-            border: 1px solid;
-         }
-         .seller .info{
-            padding: 9px 0;
-         }
-         .content-block .star i {
-            font-size: 24px;
-            color:#e5e5e5;
-         }
-         .estimate-text {
-            border: 1px solid #cccccc;
-            width: 100%;
-            resize: none;
-            padding: 10px;
-         }
-         .estimate-text:focus{
-            outline: none;
-         }
-         .textarea {
-            position: relative;
-         }
-         .textarea .least{
-            position: absolute;
-            color: #cbcbcb;
-            right: 10px;
-            bottom: 10px;
-            font-size: 12px;
-         }
-         .upload-photos{
-            position: relative;
-            padding-left: 90px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            height: 100px;
-         }
-         .upload-photos img{
-            height: 80px;
-            width: 80px;
-            left: 0;
-            position: absolute;
-         }
-         .upload-photos .info{
-            padding: 19px 0;
-         }
-         .upload-photos .info p{
-            font-size: 12px;
-            color: #919191;
-            margin: 5px 0;
-         }
-         .refer-btn{
-            width: 100%;
-            text-align: center;
-            background:#cccccc;
-            color:#fff;
-            font-size: 16px;
-            line-height: 24px;
-            padding: 8px 0;
-         }
-         .select{
-            padding: 10px 0;
-         }
-         .select .all-selected{
-            color: #FF8700;
-         }
+    background: #f7f7f7;
+}
+#container .header {
+    text-align: center;
+    background-color: #ffffff;
+    color: #505050;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+#container .header .header-left {
+    display: inline-block;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    width: 50px;
+    color: #494949;
+}
+#container .header .header-left .icon {
+    font-size: 20px;
+}
+.content-block{background: #fff;margin-bottom: 10px; }
+.sales,.seller{
+    position: relative;
+    padding-left: 45px;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sales .img, .seller .img{
+    position: absolute;
+    left: 0px;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+}
+.sales .info .name{
+    padding-bottom:4px;
+}
+.sales .info .time{
+    font-size: 12px;
+}
+.zan,.star{
+    text-align: center;
+    background: #fff;
+    padding: 10px 0;
+}
+.zan .zan-btn-area{
+    width: 30%;
+    border: 1px solid #e5e5e5;
+    padding:5px 10px;
+    border-radius: 15px;
+    margin:0 auto;
+}
+ .zan .zan-btn-area.already-zan{
+    color: #EA6868;
+    border: 1px solid;
+ }
+ .seller .info{
+    padding: 9px 0;
+ }
+ .content-block .star i {
+    font-size: 24px;
+    color:#e5e5e5;
+ }
+ .content-block .star i.active{
+    color:#EA6868;
+ }
+ .estimate-text {
+    border: 1px solid #cccccc;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+ }
+ .estimate-text:focus{
+    outline: none;
+ }
+ .textarea {
+    position: relative;
+ }
+ .textarea .least{
+    position: absolute;
+    color: #cbcbcb;
+    right: 10px;
+    bottom: 10px;
+    font-size: 12px;
+ }
+ .upload-photos{
+    position: relative;
+    padding-left: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100px;
+ }
+ .upload-photos img{
+    height: 80px;
+    width: 80px;
+    left: 0;
+    position: absolute;
+ }
+ .upload-photos .info{
+    padding: 19px 0;
+ }
+ .upload-photos .info p{
+    font-size: 12px;
+    color: #919191;
+    margin: 5px 0;
+ }
+ .refer-btn{
+    width: 100%;
+    text-align: center;
+    background:#cccccc;
+    color:#fff;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 0;
+ }
+ .select{
+    padding: 10px 0;
+ }
+ .select .all-selected{
+    color: #FF8700;
+ }

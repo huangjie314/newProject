@@ -96,4 +96,17 @@
     $('.zan-btn-area').click(function(){
         $(this).toggleClass('already-zan');
     })
+    $('.star').on('click', 'i', function(){
+        var _this = $(this);
+        if(_this.index() === 0 && _this.hasClass('active')){
+            if(!_this.siblings().hasClass('active')){
+                 _this.removeClass('active');
+            } else {
+                _this.siblings().removeClass('active');
+            }
+        } else {
+             _this.addClass('active').prevAll().addClass('active');
+            _this.nextAll().removeClass('active');
+        }
+    })
 </script>
