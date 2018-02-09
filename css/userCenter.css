@@ -50,8 +50,7 @@ a.account-recharge:hover {
 .grid-tab{
     display: table;
     width: 100%;
-    height: 2.24rem;
-    height: 22.4vw;
+    height: 70px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
     background-color: #fff;
@@ -66,27 +65,24 @@ a.account-recharge:hover {
     border-right: 1px solid #ddd;
 }
 .grid-list .num {
-    padding: .453333rem 0 .293333rem;
+  /*  padding: .453333rem 0 .293333rem;
     padding: 4.533333vw 0 2.933333vw;
     font-size: 6.933333vw;
     line-height: .693333rem;
     line-height: 6.933333vw;
+    font-weight: 700;*/
     font-weight: 700;
+    font-size: 20px;
 }
 .grid-list .txt {
-    font-size: .32rem;
+   /* font-size: .32rem;
     line-height: .32rem;
-    line-height: 3.2vw;
+    line-height: 3.2vw;*/
+    font-size: 10px;
 }
 .grid-list .my-account,.grid-list .my-point{
-    margin-top: .133333rem;
-    margin-top: 1.333333vw;
-    font-size: .32rem;
-    line-height: .373333rem;
-    line-height: 3.733333vw;
-    font-weight: 500;
+    font-size: 14px;
     color: #666;
-    font-weight: 700;
 }
 
 .order-area .all-order{
