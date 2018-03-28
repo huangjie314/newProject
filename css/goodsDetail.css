@@ -615,3 +615,9 @@ button.close i{
 .goodsDetail-desc{
     padding: 10px;
 }
+.goodsDetail-desc p{
+    padding-bottom: 5px;
+}
+.goodsDetail-desc .show-img{
+    padding: 10px 0px;
+}

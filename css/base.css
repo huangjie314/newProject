@@ -68,6 +68,10 @@ table{
 textarea{
 	padding:0px 3px;
 }
+/*字体颜色*/
+.red{
+    color:#ee5a52;
+}
 /*普通按钮样式*/
 .btn-normal:link{
 	height: 40px;
@@ -386,7 +390,7 @@ textarea{
 #bottom-nav{
 	position:fixed;
 	bottom:0;
-	background:rgba(255,255,255,0.7);
+	background:rgba(255,255,255,1);
 	width:100%;
 	max-width:640px;
 	display:-webkit-box;
@@ -404,7 +408,7 @@ textarea{
 	border-right:0;
 }
 #bottom-nav .active{
-	color:#009943;
+	color:#ee5a52;
 }
 #bottom-nav span{
 	display:block;

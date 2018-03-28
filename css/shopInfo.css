@@ -7,34 +7,35 @@ html{
 /****头部信息***/
 .top-area{
     position: relative;
-    height: 155px;
+    height: auto;
     text-align: center;
-    background: #009943;
+    background: #ffffff;
+    padding:10px;
 }
-.shop-info{
-    top:0px;
-    line-height: 30px;
-    position: absolute;
-    color: #fff;
-    left: 100px;
-    text-align: left;
+.shop-name{
+    line-height: 24px;
+    color: #2e2e2e;
 }
-.shop-info span{
-	margin-left:5px;
+.shop-code{
+    color: #989898;
+    font-size: 12px;
+    line-height: 24px;
 }
 .shop-img-area {
-    width: 85px;
+    /*width: 85px;
     height: 85px;
     padding: 2px;
-    border-radius: 50%;
-    position: absolute;
+    border-radius: 50%;*/
+    margin: 0 auto;
+    padding-top: 20px;
+   /* position: absolute;
     top: 25px;
-    left: 10px;
+    left: 10px;*/
 }
 img.shop-img {
     width: 82px;
-    height: 79px;
-    border: 2px solid #fff;
+    height: 82px;
+    border: 2px solid #989898;
     border-radius: 50%;
 }
 .left_money {
@@ -582,44 +583,18 @@ span.get-money {
 	color: #bbb;
 }
 .shop-score-area {
-    position: absolute;
+  /*  position: absolute;
     top: 30px;
-    left: 99px;
+    left: 99px;*/
     color: #fff;
     font-size: 14px;
+    line-height: 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 i.icon.iconfont.star{
 	font-size: 14px;
-}
-
-.star-desc {
-    display: flex;
-    width: 100%;
-    padding: 5px 2px;
-}
-.star-desc.star-1 {
-    color: #f6e2a4;
-}
-.star-desc.star-2 {
-    color: #ffe699;
-}
-.star-desc.star-3 {
-    color: #fdd28d;
-}
-.star-desc.star-4 {
-    color: #ffd859;
-}
-.star-desc.star-5 {
-    color: #ffcf31;
-}
-.star-desc.star-6 {
-    color: #fab64;
-}
-.star-desc.star-7 {
-    color: #f8a519;
 }
 i.icon.iconfont.star {
     color: #F39801;
