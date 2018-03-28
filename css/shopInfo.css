@@ -27,7 +27,7 @@ html{
     padding: 2px;
     border-radius: 50%;*/
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 10px;
    /* position: absolute;
     top: 25px;
     left: 10px;*/
@@ -88,6 +88,7 @@ span.get-money {
 .banner-tap {
     position: absolute;
     width: 100%;
+    z-index: 999;
     top: 0px;
     left: 0px;
     background: #fff;
@@ -294,9 +295,20 @@ span.get-money {
 .dining-wrap .active{
 	color:#008000;
 }
-.dining-wrap .fir-cate>.active{
-	background:#399e39;
-	color:#fff;
+
+.dining-wrap .cate-area>.active:before{
+    content: '.';
+    color: #399e39;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    width:8px;
+    background-color: #399e39;
+}
+.dining-wrap .cate-area>.active>.cate-list{
+    background:#fff;
+    color:#323232;
 }
 .dining-wrap .sec-cate>.active {
     background: #83d883;

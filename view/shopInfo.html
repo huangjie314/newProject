@@ -13,50 +13,26 @@
     <link rel="stylesheet"  href="../css/iconfont.css">
     <link rel="stylesheet"  href="../css/common.css">
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/base.css?v=124646">
 
-    <link rel="stylesheet"  href="../css/shopInfo.css">
-    <style type="text/css">
+    <link rel="stylesheet"  href="../css/shopInfo.css?v=5484547">
+  <!--   <style type="text/css">
         .fixed_on{
             position: fixed;
             z-index: 999;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
     <!--主容器-->
     <div id="container" class="container-fluid">
         <div class="top-area">
-            <!-- <div class="shop-img-area">
-                <img class="shop-img" src="../image/20171008134732530.jpg" alt="" class="shop-img" />
-            </div>
-            <div class="shop-info">真味一家</div>
-            <div class="shop-score-area">
-                <div class="star-area">口碑评分：
-                    <i class="icon iconfont star">&#xe641;</i>
-                    <i class="icon iconfont star">&#xe641;</i>
-                    <i class="icon iconfont star">&#xe641;</i>
-
-
-                    <i class="icon iconfont star">&#xe641;</i>
-                    <i class="icon iconfont star">&#xe641;</i>
-                    <i class="icon iconfont star">&#xe641;</i>
-                    <i class="icon iconfont star">&#xe641;</i>
-                </div>
-                <div class="star-desc star-7">孤独求败</div>
-            </div>
-            <div class="left_money">
-                <i class="icon iconfont">&#xe6f5;</i> 店铺状态 <span class="text-success">在线中</span>
-            </div>
-            <div class="send-time">配送时间：11:20-13:00，17:20-20:30</div> -->
             <div class="shop-img-area">
                 <img class="shop-img" src="../image/20171008134732531.jpg" alt="私厨" />
             </div>
             <div class="shop-score-area">
                 <div class="star-area">
-                    <i class="icon iconfont star">&#xe641;</i>
-                    <i class="icon iconfont star">&#xe641;</i>
                     <i class="icon iconfont star">&#xe641;</i>
                     <i class="icon iconfont star">&#xe641;</i>
                     <i class="icon iconfont star">&#xe641;</i>
@@ -76,8 +52,8 @@
             <!-- 点餐 -->
             <div class="goods-list-area current" >
                 <div class="cate-area row">
-                    <div class="fir-cate">
-                        <span class="cate-list fir limit-text active" data-id="0">全部菜品</span>
+                    <div class="fir-cate active">
+                        <span class="cate-list fir limit-text" data-id="0">全部菜品</span>
                     </div>
                     <div class="fir-cate">
                         <span class="cate-list fir limit-text" data-id="612">餐盒</span>
@@ -125,19 +101,7 @@
                         <span class="cate-list fir limit-text" data-id="552">特色炒面</span>
                     </div>
                     <div class="fir-cate">
-                            <span class="cate-list fir limit-text" data-id="85">冰纷圣代</span>
-                            <div class="sec-cate">
-                                <span class="cate-list sec limit-text" data-id="86">小青菜</span>
-                                <div class="thr-cate">
-                                    <span class="cate-list thr limit-text" data-id="87">娃娃菜</span>
-                                </div>
-                                <div class="thr-cate">
-                                    <span class="cate-list thr limit-text" data-id="89">菜花</span>
-                                </div>
-                            </div>
-                            <div class="sec-cate">
-                                <span class="cate-list sec limit-text" data-id="88">黄豆</span>
-                            </div>
+                        <span class="cate-list fir limit-text" data-id="85">冰纷圣代</span>
                     </div>
                 </div>
                 <div class="dining-area">
@@ -829,24 +793,26 @@
 <script src="../js/jquery-1.11.0.js"></script>
 <script src="../js/page.js" type="text/javascript"></script>
 <script src="../js/common.js" type="text/javascript"></script>
-<script type="text/javascript" src="../js/shopInfo.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="../js/shopInfo.js?v=5465"></script>
+<!-- <script type="text/javascript">
     var $bannerTap = $('.banner-tap');
     var tapTop = $bannerTap.offset().top;
     var tapHeight = $bannerTap.height();
     var bottomNavHeight = $('.bottomNav').height();
+    var $height = $(window).height() - tapHeight - bottomNavHeight;
+    $('.dining-area').height($height);
+    $('.cate-area').height($height);
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         if(tapTop <= scrollTop){
-            var height = $(window).height() - tapHeight - bottomNavHeight;
             $bannerTap.addClass('fixed_on');
-            $('.dining-area').css({'overflow-y': 'scroll', 'height': height});
-            $('.cate-area').css({'overflow-y': 'scroll', 'height': height});
+            $('.dining-area').css({'overflow-y': 'scroll'});
+            $('.cate-area').css({'overflow-y': 'scroll'});
         } else {
-            $bannerTap.removeClass('fixed_on');
-            $('.dining-area').css({'overflow-y': 'hidden', 'height': 'auto'});
-            $('.cate-area').css({'overflow-y': 'hidden', 'height': 'auto'});
+           $bannerTap.removeClass('fixed_on');
+            $('.dining-area').css({'overflow-y': 'hidden'});
+            $('.cate-area').css({'overflow-y': 'hidden'});
         }
     })
-</script>
+</script> -->
 </html>

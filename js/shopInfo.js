@@ -15,13 +15,14 @@ $(function(){
      */
     function bindEvent(){
     	//点击分类
-    	$(".dining-wrap .cate-list").click(function(){
+    	$(".dining-wrap .fir-cate").click(function(){
     		var _this = $(this);
     		if(_this.hasClass("active")){
     			return false;
     		}
+            _this.addClass("active").siblings('.fir-cate').removeClass("active");
 
-    		if(_this.hasClass('fir')){
+    		/*if(_this.hasClass('fir')){
     			$('.dining-wrap .cate-list.active').removeClass('active');
     		}else if(_this.hasClass('sec')){
     			$('.dining-wrap .sec.active').removeClass('active');
@@ -44,7 +45,7 @@ $(function(){
     		//展示下级
     		if(_this.next().length != 0){
     			_this.nextAll().slideDown(250,"linear");
-    		}
+    		}*/
     		cid = _this.attr("data-id");
     		render();//渲染页面
     	})
